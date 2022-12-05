@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">Tercih Buddy</string>
+    <string name="tercih_listem">Tercih Listem</string>
+    <string name="tercih_listeme_ekle">Tercih Listeme Ekle</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="tercih_listem_text">Tercih Listem</string>
+    <string name="tercih_listemden_kald_r">tercih listemden kaldır</string>
+    <string name="ana_men">Ana Menü</string>
+    <string name="arama_kriterleri">arama kriterleri</string>
+    <string name="b_l_mleri_g_ster">Bölümleri Göster</string>
+    <string name="tercih_buddy">Tercih Buddy</string>
+    <string name="arama_kriterleri_text">Arama Kriterleri</string>
+    <string name="listelenen_b_l_mler">Listelenen Bölümler</string>
+    <string name="ehir_ve_niversite_se_imi">Şehir ve Üniversite Seçimi</string>
+    <string name="alanlar_b_l_mler">Alanlar, Bölümler</string>
+    <string name="uyari">!!UYARI!!</string>
+    <string name="sehir">Şehir ve Üniversite Seçimi</string>
+    <string name="alanlar_ve_b_l_mler">Alanlar ve Bölümler</string>
 </resources>

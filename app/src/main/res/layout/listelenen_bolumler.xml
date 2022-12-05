@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".listelenen_bolumler">
+
+
     <TextView
         android:id="@+id/tercih_buddy"
         android:layout_width="match_parent"
@@ -14,68 +16,38 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-
         />
     <TextView
-        android:id="@+id/main_text"
+        android:id="@+id/Listelenen_bolumler"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/uyari"
+        android:text="@string/listelenen_b_l_mler"
         android:textSize="20sp"
         app:layout_constraintTop_toBottomOf="@+id/tercih_buddy"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/şehir_ve_üniversite_seçimi2"
         />
 
-    <Button
-        android:id="@+id/şehir_ve_üniversite_seçimi2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingBottom="30dp"
-        android:text="@string/ehir_ve_niversite_se_imi"
-
-        android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@id/alanlar_bölümler"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/alanlar_bölümler"
+        android:id="@+id/tercih_listeme_ekle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingBottom="30dp"
-        android:text="@string/alanlar_b_l_mler"
-
-        android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@id/arama_kriterleri_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/arama_kriterleri_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingBottom="30dp"
         android:text="@string/tercih_listeme_ekle"
-
         android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@id/tercih_listem"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tercih_listem"
+        />
 
     <Button
         android:id="@+id/tercih_listem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="buttonTercihListesi"
-        android:paddingBottom="30dp"
         android:text="@string/tercih_listem"
-
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-
+        app:layout_constraintStart_toEndOf="@+id/tercih_listeme_ekle" />
 </androidx.constraintlayout.widget.ConstraintLayout>
