@@ -25,28 +25,29 @@
         app:layout_constraintTop_toBottomOf="@+id/tercih_buddy"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/şehir_ve_üniversite_seçimi2"
+        app:layout_constraintBottom_toTopOf="@id/şehir_ve_üniversite_seçimi_button"
         />
 
     <Button
-        android:id="@+id/şehir_ve_üniversite_seçimi2"
+        android:id="@+id/şehir_ve_üniversite_seçimi_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingBottom="30dp"
         android:text="@string/ehir_ve_niversite_se_imi"
-
+        android:onClick="sehirveuniversitesecimi"
         android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@id/alanlar_bölümler"
+        app:layout_constraintBottom_toTopOf="@id/alanlar_bölümler_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/alanlar_bölümler"
+        android:id="@+id/alanlar_bölümler_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="alanlarbolumler"
         android:paddingBottom="30dp"
-        android:text="@string/alanlar_b_l_mler"
 
+        android:text="@string/alanlar_b_l_mler"
         android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@id/arama_kriterleri_button"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,9 +57,10 @@
         android:id="@+id/arama_kriterleri_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="arama_kriterleri"
         android:paddingBottom="30dp"
-        android:text="@string/tercih_listeme_ekle"
 
+        android:text="@string/arama_kriterleri_text"
         android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@id/tercih_listem"
         app:layout_constraintEnd_toEndOf="parent"

@@ -24,4 +24,5 @@
     <string name="uyari">!!UYARI!!</string>
     <string name="sehir">Şehir ve Üniversite Seçimi</string>
     <string name="alanlar_ve_b_l_mler">Alanlar ve Bölümler</string>
+    <string name="bolumleri_goster">Bolumleri Goster</string>
 </resources>

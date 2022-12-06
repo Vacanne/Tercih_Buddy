@@ -8,25 +8,76 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
+
     private Button tercihlistem_button;
+    private Button aramakriterleri_button;
+    private Button alanlarbolumler_button;
+    private Button sehirveuniversitesecimi_button;
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        tercihlistem_button =(Button) findViewById(R.id.tercih_listem);
+
+        sehirveuniversitesecimi_button  = (Button) findViewById(R.id.şehir_ve_üniversite_seçimi_button);
+        tercihlistem_button             = (Button) findViewById(R.id.tercih_listem);
+        aramakriterleri_button          = (Button) findViewById(R.id.arama_kriterleri_button);
+        alanlarbolumler_button          = (Button) findViewById(R.id.alanlar_bölümler_button);
+
+
+
+        sehirveuniversitesecimi_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                opensehirveuniversitesecimi();
+            }
+        });
+
         tercihlistem_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openActivity2();
+                tercihlistemactivityopen();
+            }
+        });
+        aramakriterleri_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                aramakriterleri_activityyopen();
+            }
+        });
+
+        alanlarbolumler_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                alanlarbolumler_activityopen();
             }
         });
     }
 
-    public void openActivity2(){
+    public void opensehirveuniversitesecimi(){
+        Intent intent = new Intent(this, sehirveuniversitesecimi.class);
+        startActivity(intent);
+    }
+
+    public void tercihlistemactivityopen(){
         Intent intent = new Intent (this, Tercih_Listem.class);
         startActivity(intent);
     }
+
+    public void aramakriterleri_activityyopen(){
+        Intent intent = new Intent(this, arama_kriterleri.class);
+        startActivity(intent);
+    }
+
+    public void alanlarbolumler_activityopen(){
+        Intent intent = new Intent(this, alanlarbolumler.class);
+        startActivity(intent);
+    }
+
   /*  Button yourButton = (Button) findViewById(R.id.tercih_listem);
 
         yourButton.setOnClickListener(new OnClickListener(){

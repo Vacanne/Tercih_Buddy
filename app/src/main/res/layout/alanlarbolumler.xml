@@ -27,11 +27,10 @@
 
         />
     <Button
-        android:id="@+id/arama_kriterleri_button"
+        android:id="@+id/bolumlerigoster_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
-        android:text="@string/b_l_mleri_g_ster"
+        android:text="@string/bolumleri_goster"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
 

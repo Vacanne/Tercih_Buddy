@@ -30,7 +30,7 @@
 
 
     <Button
-        android:id="@+id/tercih_listeme_ekle"
+        android:id="@+id/tercih_listeme_ekle_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tercih_listeme_ekle"
@@ -49,5 +49,5 @@
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tercih_listeme_ekle" />
+        app:layout_constraintStart_toEndOf="@+id/tercih_listeme_ekle_button" />
 </androidx.constraintlayout.widget.ConstraintLayout>
