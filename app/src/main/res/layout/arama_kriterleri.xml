@@ -17,15 +17,186 @@
         app:layout_constraintEnd_toEndOf="parent"
         />
     <TextView
-        android:id="@+id/arama_kriterleri_text"
+        android:id="@+id/text_aramakriteleri_0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/arama_kriterleri_text"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tercih_buddy"
-
         />
+
+    <CheckBox
+        android:id="@+id/checkbox_aramakriterleri_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_4_y_ll_k_b_l_mler"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_aramakriteleri_0"
+        />
+    <CheckBox
+        android:id="@+id/checkbox_aramakriterleri_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_2_y_ll_k_b_l_mler"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkbox_aramakriterleri_1"
+        />
+    <CheckBox
+        android:id="@+id/checkbox_aramakriterleri_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zel_yetenek_b_l_mleri"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkbox_aramakriterleri_2"
+        />
+    <CheckBox
+        android:id="@+id/checkbox_aramakriterleri_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/a_k_retim_b_l_mleri_4_y_ll_k"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkbox_aramakriterleri_3"
+        />
+    <CheckBox
+        android:id="@+id/checkbox_aramakriterleri_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/a_k_retim_b_l_mleri_2_y_ll_k"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkbox_aramakriterleri_4"
+        />
+    <CheckBox
+        android:id="@+id/checkbox_aramakriterleri_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/devlet_niversiteleri"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkbox_aramakriterleri_5"
+        />
+    <CheckBox
+        android:id="@+id/checkbox_aramakriterleri_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/vak_f_zel_niversiteler"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/checkbox_aramakriterleri_10"
+        app:layout_constraintTop_toTopOf="@id/checkbox_aramakriterleri_6"
+        />
+
+    <CheckBox
+        android:id="@+id/checkbox_aramakriterleri_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/burslu_b_l_mler"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/checkbox_aramakriterleri_10"
+        app:layout_constraintTop_toTopOf="@id/checkbox_aramakriterleri_1"
+        />
+    <CheckBox
+        android:id="@+id/checkbox_aramakriterleri_9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cretsiz_b_l_mler"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/checkbox_aramakriterleri_10"
+        app:layout_constraintTop_toTopOf="@id/checkbox_aramakriterleri_2"
+        />
+    <CheckBox
+        android:id="@+id/checkbox_aramakriterleri_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_25_ndirimli_b_l_mler"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/checkbox_aramakriterleri_11"
+        app:layout_constraintTop_toTopOf="@id/checkbox_aramakriterleri_3"
+        />
+    <CheckBox
+        android:id="@+id/checkbox_aramakriterleri_11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_50_ndirimli_b_l_mler"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/checkbox_aramakriterleri_4"
+        app:layout_constraintTop_toTopOf="@id/checkbox_aramakriterleri_4"
+        />
+    <CheckBox
+        android:id="@+id/checkbox_aramakriterleri_12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cretli_ndirimsiz_b_l_mler"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/checkbox_aramakriterleri_5"
+        app:layout_constraintTop_toTopOf="@id/checkbox_aramakriterleri_5"
+        />
+
+    <CheckBox
+        android:id="@+id/checkbox_aramakriterleri_15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/aday_n_s_ralama_arali"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkbox_aramakriterleri_6"
+        />
+    <CheckBox
+        android:id="@+id/checkbox_aramakriterleri_16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/aday_n_puan_aral"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkbox_aramakriterleri_15"
+        />
+
+
+
+    <EditText
+        android:id="@+id/editText_adayin_min_siralamasi"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="@id/checkbox_aramakriterleri_10"
+        app:layout_constraintTop_toTopOf="@id/checkbox_aramakriterleri_15"
+        />
+    <EditText
+        android:id="@+id/editText_adayin_max_siralamasi"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@id/editText_adayin_min_siralamasi"
+        app:layout_constraintTop_toTopOf="@id/editText_adayin_min_siralamasi"
+        />
+
+
+
+    <EditText
+        android:id="@+id/editText_adayin_min_puanı"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="@id/checkbox_aramakriterleri_10"
+        app:layout_constraintTop_toTopOf="@id/checkbox_aramakriterleri_16"
+        />
+    <EditText
+        android:id="@+id/editText_adayin_max_puanı"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@id/editText_adayin_min_puanı"
+        app:layout_constraintTop_toTopOf="@id/editText_adayin_min_puanı"
+        />
+
     <Button
         android:id="@+id/bolumlerigoster_aramakriterleri_button"
         android:layout_width="match_parent"
@@ -36,4 +207,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
 
         />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

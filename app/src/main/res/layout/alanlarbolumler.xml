@@ -26,6 +26,158 @@
         app:layout_constraintTop_toBottomOf="@+id/tercih_buddy"
 
         />
+
+    <CheckBox
+        android:id="@+id/checkbox_alanlarvebolumler_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/say_sal"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/alanlarvebolumler_text"
+        />
+    <CheckBox
+        android:id="@+id/checkbox_alanlarvebolumler_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/e_it_a_rl_k"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/checkbox_alanlarvebolumler_0"
+        app:layout_constraintTop_toTopOf="@id/checkbox_alanlarvebolumler_0"
+        />
+    <CheckBox
+        android:id="@+id/checkbox_alanlarvebolumler_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/s_zel"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/checkbox_alanlarvebolumler_1"
+        app:layout_constraintTop_toTopOf="@id/checkbox_alanlarvebolumler_1"
+        />
+    <CheckBox
+        android:id="@+id/checkbox_alanlarvebolumler_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dil"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/checkbox_alanlarvebolumler_2"
+        app:layout_constraintTop_toTopOf="@id/checkbox_alanlarvebolumler_2"
+        />
+
+
+
+
+    <CheckBox
+        android:id="@+id/checkbox_alanlarvebolumler_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_4_y_ll_k_b_l_mler"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkbox_alanlarvebolumler_3"
+        />
+    <CheckBox
+        android:id="@+id/checkbox_alanlarvebolumler_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Acil Yardım ve Afet Yönetimi (SAY)"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkbox_alanlarvebolumler_4"
+        />
+    <CheckBox
+        android:id="@+id/checkbox_alanlarvebolumler_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adli Bilimler (SAY)"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkbox_alanlarvebolumler_5"
+        />
+    <CheckBox
+        android:id="@+id/checkbox_alanlarvebolumler_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adli Bilişim Mühendisliği (SAY)"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkbox_alanlarvebolumler_6"
+        />
+    <CheckBox
+        android:id="@+id/checkbox_alanlarvebolumler_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adli Bilişim Mühendisliği (M.T.O.K.) (SAY)"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkbox_alanlarvebolumler_7"
+        />
+    <CheckBox
+        android:id="@+id/checkbox_alanlarvebolumler_9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ağaç İşleri Endüstri Mühendisliği (SAY)"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkbox_alanlarvebolumler_8"
+        />
+
+    <CheckBox
+        android:id="@+id/checkbox_alanlarvebolumler_01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aile ve Tüketici Bilimleri (EA)"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkbox_alanlarvebolumler_9"
+        />
+    <CheckBox
+        android:id="@+id/checkbox_alanlarvebolumler_02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aktüerya Bilimleri (SAY)"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkbox_alanlarvebolumler_01"
+        />
+    <CheckBox
+        android:id="@+id/checkbox_alanlarvebolumler_03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Almanca Öğretmenliği (DİL)"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkbox_alanlarvebolumler_02"
+        />
+    <CheckBox
+        android:id="@+id/checkbox_alanlarvebolumler_04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_2_y_ll_k_b_l_mler"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkbox_alanlarvebolumler_03"
+        />
+    <CheckBox
+        android:id="@+id/checkbox_alanlarvebolumler_05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Acil Durum ve Afet Yönetimi "
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkbox_alanlarvebolumler_04"
+        />
+    <CheckBox
+        android:id="@+id/checkbox_alanlarvebolumler_06"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Açık Deniz Sondaj Teknolojisi "
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkbox_alanlarvebolumler_05"
+        />
+
+
     <Button
         android:id="@+id/bolumlerigoster_button"
         android:layout_width="match_parent"

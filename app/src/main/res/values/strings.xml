@@ -25,4 +25,23 @@
     <string name="sehir">Şehir ve Üniversite Seçimi</string>
     <string name="alanlar_ve_b_l_mler">Alanlar ve Bölümler</string>
     <string name="bolumleri_goster">Bolumleri Goster</string>
+    <string name="_4_y_ll_k_b_l_mler">4 Yıllık Bölümler</string>
+    <string name="_2_y_ll_k_b_l_mler">2 Yıllık Bölümler</string>
+    <string name="zel_yetenek_b_l_mleri">Özel Yetenek Bölümleri</string>
+    <string name="a_k_retim_b_l_mleri_4_y_ll_k">Açıköğretim Bölümleri (4 Yıllık)</string>
+    <string name="a_k_retim_b_l_mleri_2_y_ll_k">Açıköğretim Bölümleri (2 Yıllık)</string>
+    <string name="devlet_niversiteleri">Devlet Üniversiteleri</string>
+    <string name="vak_f_zel_niversiteler">Vakıf (Özel) Üniversiteler</string>
+    <string name="burslu_b_l_mler">Burslu Bölümler</string>
+    <string name="cretsiz_b_l_mler">Ücretsiz Bölümler</string>
+    <string name="_25_ndirimli_b_l_mler">%25 İndirimli Bölümler</string>
+    <string name="_50_ndirimli_b_l_mler">%50 İndirimli Bölümler</string>
+    <string name="cretli_ndirimsiz_b_l_mler">Ücretli (İndirimsiz) Bölümler</string>
+    <string name="aday_n_puan_aral">Adayın Puan Aralığı</string>
+    <string name="aday_n_s_ralama_aral">Adayın Sıralama Aralığı</string>
+    <string name="aday_n_s_ralama_arali">Adayın Sıralama Aralığı</string>
+    <string name="say_sal">Sayısal</string>
+    <string name="e_it_a_rl_k">Eşit Ağırlık</string>
+    <string name="s_zel">Sözel</string>
+    <string name="dil">Dil</string>
 </resources>
