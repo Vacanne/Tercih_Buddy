@@ -6,6 +6,101 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <CheckBox
+                android:id="@+id/checkbox_tercihlistem_11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1) Tercih Edilen Bölüm"
+                android:textSize="12sp" />
+
+            <CheckBox
+                android:id="@+id/checkbox_tercihlistem_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1) Tercih Edilen Bölüm"
+                android:textSize="12sp" />
+
+            <CheckBox
+                android:id="@+id/checkbox_tercihlistem_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1) Tercih Edilen Bölüm"
+                android:textSize="12sp" />
+
+            <CheckBox
+                android:id="@+id/checkbox_tercihlistem_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1) Tercih Edilen Bölüm"
+                android:textSize="12sp" />
+
+            <CheckBox
+                android:id="@+id/checkbox_tercihlistem_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1) Tercih Edilen Bölüm"
+                android:textSize="12sp" />
+
+            <CheckBox
+                android:id="@+id/checkbox_tercihlistem_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1) Tercih Edilen Bölüm"
+                android:textSize="12sp" />
+
+            <CheckBox
+                android:id="@+id/checkbox_tercihlistem_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1) Tercih Edilen Bölüm"
+                android:textSize="12sp" />
+
+            <CheckBox
+                android:id="@+id/checkbox_tercihlistem_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1) Tercih Edilen Bölüm"
+                android:textSize="12sp" />
+
+            <CheckBox
+                android:id="@+id/checkbox_tercihlistem_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1) Tercih Edilen Bölüm"
+                android:textSize="12sp" />
+
+            <CheckBox
+                android:id="@+id/checkbox_tercihlistem_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1) Tercih Edilen Bölüm"
+                android:textSize="12sp" />
+
+            <CheckBox
+                android:id="@+id/checkbox_tercihlistem_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1) Tercih Edilen Bölüm"
+                android:textSize="12sp" />
+
+            <CheckBox
+                android:id="@+id/checkbox_tercihlistem_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1) Tercih Edilen Bölüm"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </ScrollView>
+
     <TextView
         android:id="@+id/tercih_buddy"
         android:layout_width="match_parent"
@@ -27,117 +122,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
          />
-    <CheckBox
-        android:id="@+id/checkbox_tercihlistem_0"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1) Tercih Edilen Bölüm"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView_tercihlistem"
-        />
-    <CheckBox
-        android:id="@+id/checkbox_tercihlistem_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1) Tercih Edilen Bölüm"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/checkbox_tercihlistem_0"
-        />
-    <CheckBox
-        android:id="@+id/checkbox_tercihlistem_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1) Tercih Edilen Bölüm"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/checkbox_tercihlistem_1"
-        />
-    <CheckBox
-        android:id="@+id/checkbox_tercihlistem_3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1) Tercih Edilen Bölüm"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/checkbox_tercihlistem_2"
-        />
-    <CheckBox
-        android:id="@+id/checkbox_tercihlistem_4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1) Tercih Edilen Bölüm"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/checkbox_tercihlistem_3"
-        />
-    <CheckBox
-        android:id="@+id/checkbox_tercihlistem_5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1) Tercih Edilen Bölüm"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/checkbox_tercihlistem_4"
-        />
-
-    <CheckBox
-        android:id="@+id/checkbox_tercihlistem_6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1) Tercih Edilen Bölüm"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/checkbox_tercihlistem_5"
-        />
-    <CheckBox
-        android:id="@+id/checkbox_tercihlistem_7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1) Tercih Edilen Bölüm"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/checkbox_tercihlistem_6"
-        />
-    <CheckBox
-        android:id="@+id/checkbox_tercihlistem_8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1) Tercih Edilen Bölüm"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/checkbox_tercihlistem_7"
-        />
-    <CheckBox
-        android:id="@+id/checkbox_tercihlistem_9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1) Tercih Edilen Bölüm"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/checkbox_tercihlistem_8"
-        />
-    <CheckBox
-        android:id="@+id/checkbox_tercihlistem_10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1) Tercih Edilen Bölüm"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/checkbox_tercihlistem_9"
-        />
-    <CheckBox
-        android:id="@+id/checkbox_tercihlistem_11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1) Tercih Edilen Bölüm"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/checkbox_tercihlistem_10"
-        />
-
-
 
 
     <Button

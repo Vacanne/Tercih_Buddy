@@ -15,25 +15,23 @@ public class MainActivity extends AppCompatActivity {
     private Button sehirveuniversitesecimi_button;
 
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
 
-        sehirveuniversitesecimi_button  = (Button) findViewById(R.id.şehir_ve_üniversite_seçimi_button);
-        tercihlistem_button             = (Button) findViewById(R.id.tercih_listem);
-        aramakriterleri_button          = (Button) findViewById(R.id.arama_kriterleri_button);
-        alanlarbolumler_button          = (Button) findViewById(R.id.alanlar_bölümler_button);
-
+        sehirveuniversitesecimi_button = findViewById(R.id.sehir_ve_universite_secimi_button);
+        tercihlistem_button = findViewById(R.id.tercih_listem);
+        aramakriterleri_button = findViewById(R.id.arama_kriterleri_button);
+        alanlarbolumler_button = findViewById(R.id.alanlar_bölümler_button);
 
 
         sehirveuniversitesecimi_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                opensehirveuniversitesecimi();
+                Intent intent = new Intent(MainActivity.this,sehirveuniversitesecimi.class);
+                startActivity(intent);
             }
         });
 
@@ -58,22 +56,21 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void opensehirveuniversitesecimi(){
-        Intent intent = new Intent(this, sehirveuniversitesecimi.class);
+    public void opensehirveuniversitesecimi() {
+
+    }
+
+    public void tercihlistemactivityopen() {
+        Intent intent = new Intent(this, Tercih_Listem.class);
         startActivity(intent);
     }
 
-    public void tercihlistemactivityopen(){
-        Intent intent = new Intent (this, Tercih_Listem.class);
-        startActivity(intent);
-    }
-
-    public void aramakriterleri_activityyopen(){
+    public void aramakriterleri_activityyopen() {
         Intent intent = new Intent(this, arama_kriterleri.class);
         startActivity(intent);
     }
 
-    public void alanlarbolumler_activityopen(){
+    public void alanlarbolumler_activityopen() {
         Intent intent = new Intent(this, alanlarbolumler.class);
         startActivity(intent);
     }
