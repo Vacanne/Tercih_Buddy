@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.firebase.firestore.FirebaseFirestore;
+
+
 public class MainActivity extends AppCompatActivity {
 
     private Button tercihlistem_button;
@@ -20,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
 
         sehirveuniversitesecimi_button = findViewById(R.id.sehir_ve_universite_secimi_button);
         tercihlistem_button = findViewById(R.id.tercih_listem);

@@ -1,0 +1,41 @@
+{
+
+  "project_info": {
+    "project_number": "806125434558",
+    "project_id": "tercih-buddy",
+    "storage_bucket": "tercih-buddy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:806125434558:android:ea1f5b4b6871fd1d8650ef",
+        "android_client_info": {
+          "package_name": "com.example.tercihbuddy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "806125434558-7p3bipiooco9m7cegkc7st563m95ag80.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFPPlg9YTJXxONVXLh4NGsvGOVcWEbh_Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "806125434558-7p3bipiooco9m7cegkc7st563m95ag80.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+
+}
