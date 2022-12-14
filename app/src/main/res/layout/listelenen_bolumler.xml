@@ -29,139 +29,270 @@
         app:layout_constraintEnd_toEndOf="parent"
         />
 
-    <CheckBox
-        android:id="@+id/checkbox_listelenenblomler_0"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Bilgisayar Mühendisliği"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_listelenen_bolumler"
-        />
-    <CheckBox
-        android:id="@+id/checkbox_listelenenblomler_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Elektrik-Elektronik Müh."
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_0"
-        />
-    <CheckBox
-        android:id="@+id/checkbox_listelenenblomler_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Endüstri Mühendisliği"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_1"
-        />
-    <CheckBox
-        android:id="@+id/checkbox_listelenenblomler_3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Havacılık ve Uzay Müh."
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_2"
-        />
-    <CheckBox
-        android:id="@+id/checkbox_listelenenblomler_4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Makine Müh."
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_3"
-        />
-    <CheckBox
-        android:id="@+id/checkbox_listelenenblomler_5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Kimya Mühendisliği"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_4"
-        />
+    <ScrollView
 
-    <CheckBox
-        android:id="@+id/checkbox_listelenenblomler_6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Fizik"
-        android:textSize="12sp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/listbol_tercih_listeme_ekle_button"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_5"
-        />
-    <CheckBox
-        android:id="@+id/checkbox_listelenenblomler_7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Matematik"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_6"
-        />
-    <CheckBox
-        android:id="@+id/checkbox_listelenenblomler_8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="İstatistik"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_7"
-        />
-    <CheckBox
-        android:id="@+id/checkbox_listelenenblomler_9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Mimarlık"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_8"
-        />
-    <CheckBox
-        android:id="@+id/checkbox_listelenenblomler_10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Biyoloji"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_9"
-        />
-    <CheckBox
-        android:id="@+id/checkbox_listelenenblomler_11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Kimya"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_10"
-        />
-    <CheckBox
-        android:id="@+id/checkbox_listelenenblomler_12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Çevre Mühendisliği"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_11"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_listelenen_bolumler"
+        >
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/checkbox_listelenenblomler_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bilgisayar Mühendisliği"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_listelenen_bolumler" />
+
+            <CheckBox
+                android:id="@+id/checkbox_listelenenblomler_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Elektrik-Elektronik Müh."
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_0" />
+
+            <CheckBox
+                android:id="@+id/checkbox_listelenenblomler_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Endüstri Mühendisliği"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_1" />
+
+            <CheckBox
+                android:id="@+id/checkbox_listelenenblomler_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Havacılık ve Uzay Müh."
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_2" />
+
+            <CheckBox
+                android:id="@+id/checkbox_listelenenblomler_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Makine Müh."
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_3" />
+
+            <CheckBox
+                android:id="@+id/checkbox_listelenenblomler_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kimya Mühendisliği"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_4" />
+
+            <CheckBox
+                android:id="@+id/checkbox_listelenenblomler_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fizik"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_5" />
+
+            <CheckBox
+                android:id="@+id/checkbox_listelenenblomler_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Matematik"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_6" />
+
+            <CheckBox
+                android:id="@+id/checkbox_listelenenblomler_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="İstatistik"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_7" />
+
+            <CheckBox
+                android:id="@+id/checkbox_listelenenblomler_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mimarlık"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_8" />
+
+            <CheckBox
+                android:id="@+id/checkbox_listelenenblomler_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Biyoloji"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_9" />
+
+            <CheckBox
+                android:id="@+id/checkbox_listelenenblomler_11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kimya"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_10" />
+
+            <CheckBox
+                android:id="@+id/checkbox_listelenenblomler_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Çevre Mühendisliği"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_11" />
+            <CheckBox
+                android:id="@+id/checkbox_listelenenblomler_13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Elektrik-Elektronik Müh."
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_0" />
+
+            <CheckBox
+                android:id="@+id/checkbox_listelenenblomler_14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Endüstri Mühendisliği"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_1" />
+
+            <CheckBox
+                android:id="@+id/checkbox_listelenenblomler_15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Havacılık ve Uzay Müh."
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_2" />
+
+            <CheckBox
+                android:id="@+id/checkbox_listelenenblomler_16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Makine Müh."
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_3" />
+
+            <CheckBox
+                android:id="@+id/checkbox_listelenenblomler_17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kimya Mühendisliği"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_4" />
+
+            <CheckBox
+                android:id="@+id/checkbox_listelenenblomler_18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fizik"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_5" />
+
+            <CheckBox
+                android:id="@+id/checkbox_listelenenblomler_19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Matematik"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_6" />
+
+            <CheckBox
+                android:id="@+id/checkbox_listelenenblomler_20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="İstatistik"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_7" />
+
+            <CheckBox
+                android:id="@+id/checkbox_listelenenblomler_21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mimarlık"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_8" />
+
+            <CheckBox
+                android:id="@+id/checkbox_listelenenblomler_22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Biyoloji"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_9" />
+
+            <CheckBox
+                android:id="@+id/checkbox_listelenenblomler_23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kimya"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_10" />
+
+            <CheckBox
+                android:id="@+id/checkbox_listelenenblomler_24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Çevre Mühendisliği"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_11" />
+        </LinearLayout>
+    </ScrollView>
 
     <Button
-        android:id="@+id/tercih_listeme_ekle_button"
-        android:layout_width="wrap_content"
+        android:id="@+id/listbol_tercih_listeme_ekle_button"
+        android:layout_width="350px"
         android:layout_height="wrap_content"
         android:text="@string/tercih_listeme_ekle"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/tercih_listem"
-        />
 
+        />
     <Button
-        android:id="@+id/tercih_listem"
+        android:id="@+id/listbol_ana_menu_button"
+        android:layout_width="350px"
+        android:layout_height="wrap_content"
+
+        android:text="@string/ana_men"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/listbol_tercih_listeme_ekle_button"
+        app:layout_constraintEnd_toStartOf="@+id/listbol_tercih_listem_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    <Button
+        android:id="@+id/listbol_tercih_listem_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="buttonTercihListesi"
@@ -169,5 +300,5 @@
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tercih_listeme_ekle_button" />
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

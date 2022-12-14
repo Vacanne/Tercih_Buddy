@@ -25,7 +25,7 @@
     <string name="sehir">Şehir ve Üniversite Seçimi</string>
     <string name="alanlar_ve_b_l_mler">Alanlar ve Bölümler</string>
     <string name="bolumleri_goster">Bolumleri Goster</string>
-    <string name="_4_y_ll_k_b_l_mler">4 Yıllık Bölümler</string>
+    <string name="_4_y_ll_k_b_l_mler">4 Yillik Bolumler</string>
     <string name="_2_y_ll_k_b_l_mler">2 Yıllık Bölümler</string>
     <string name="zel_yetenek_b_l_mleri">Özel Yetenek Bölümleri</string>
     <string name="a_k_retim_b_l_mleri_4_y_ll_k">Açıköğretim Bölümleri (4 Yıllık)</string>
@@ -44,4 +44,6 @@
     <string name="e_it_a_rl_k">Eşit Ağırlık</string>
     <string name="s_zel">Sözel</string>
     <string name="dil">Dil</string>
+    <string name="_1_tercih_edilen_b_l_m">1) Tercih Edilen Bölüm</string>
+    <string name="tercih_edilen_bolum">Tercih Edilen Bolum</string>
 </resources>

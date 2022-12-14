@@ -197,15 +197,25 @@
         app:layout_constraintStart_toEndOf="@id/editText_adayin_min_puanı"
         app:layout_constraintTop_toTopOf="@id/editText_adayin_min_puanı"
         />
-
+    <Button
+        android:id="@+id/alanbolum_ana_menu_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100px"
+        android:text="@string/ana_men"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
     <Button
         android:id="@+id/bolumlerigoster_aramakriterleri_button"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
         android:text="@string/b_l_mleri_g_ster"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
 
         />
 

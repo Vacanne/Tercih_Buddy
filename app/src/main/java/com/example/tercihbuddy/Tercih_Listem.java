@@ -17,7 +17,7 @@ public class Tercih_Listem extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tercih_listem);
 
-        anamenu_button = (Button) findViewById(R.id.ana_menü);
+        anamenu_button = (Button) findViewById(R.id.ana_menu);
         tercihlistemdenkaldir_button    = (Button) findViewById(R.id.tercih_listemden_kaldır);
 
         anamenu_button.setOnClickListener(new View.OnClickListener() {

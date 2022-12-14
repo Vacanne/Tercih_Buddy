@@ -10,25 +10,42 @@ import android.widget.Button;
 public class listelenen_bolumler extends AppCompatActivity {
 
     private Button tercihlistemeekle_button;
+    private Button listbol_ana_menu_button;
+    private Button tercih_listem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.listelenen_bolumler);
 
-        tercihlistemeekle_button        = (Button) findViewById(R.id.tercih_listeme_ekle_button);
+        tercihlistemeekle_button  = (Button) findViewById(R.id.listbol_tercih_listeme_ekle_button);
+        listbol_ana_menu_button = (Button) findViewById(R.id.listbol_ana_menu_button);
+        tercih_listem = (Button) findViewById(R.id.listbol_tercih_listem_button);
 
-       /* tercihlistemeekle_button.setOnClickListener(new View.OnClickListener() {
+        listbol_ana_menu_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                open();
+                openMain_activity();
             }
-        });*/
+        });
+
+        tercih_listem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                tercihlistemactivityopen();
+            }
+        });
+
     }
 
-    /*public void openlistelenen_bolumler(){
-        Intent intent = new Intent (this, listelenen_bolumler.class);
+    public void openMain_activity(){
+        Intent intent = new Intent (this, MainActivity.class);
         startActivity(intent);
-    }*/
 
+    }
+
+    public void tercihlistemactivityopen() {
+        Intent intent = new Intent(this, Tercih_Listem.class);
+        startActivity(intent);
+    }
 }

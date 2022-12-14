@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -14,10 +13,10 @@
         android:layout_height="wrap_content"
         android:text="@string/tercih_buddy"
         android:textSize="34sp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/text_sehirveuniversitesecimi"
         android:layout_width="wrap_content"
@@ -25,240 +24,337 @@
         android:text="@string/sehir"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tercih_buddy"
-        />
-
-    <CheckBox
-        android:id="@+id/checkbox_sehirveuniversitesec_0"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1) Tercih Edilen Bölüm"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_sehirveuniversitesecimi"
-        />
-    <CheckBox
-        android:id="@+id/checkbox_sehirveuniversitesec_00"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1) Tercih Edilen Bölüm"
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@id/checkbox_sehirveuniversitesec_0"
-        app:layout_constraintTop_toTopOf="@id/checkbox_sehirveuniversitesec_0"
-        />
-    <CheckBox
-        android:id="@+id/checkbox_sehirveuniversitesec_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1) Tercih Edilen Bölüm"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/checkbox_sehirveuniversitesec_0"
-        />
-    <CheckBox
-        android:id="@+id/checkbox_sehirveuniversitesec_01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1) Tercih Edilen Bölüm"
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@id/checkbox_sehirveuniversitesec_1"
-        app:layout_constraintTop_toTopOf="@id/checkbox_sehirveuniversitesec_1"
-        />
-    <CheckBox
-        android:id="@+id/checkbox_sehirveuniversitesec_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1) Tercih Edilen Bölüm"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/checkbox_sehirveuniversitesec_1"
-        />
-    <CheckBox
-        android:id="@+id/checkbox_sehirveuniversitesec_02"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1) Tercih Edilen Bölüm"
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@id/checkbox_sehirveuniversitesec_2"
-        app:layout_constraintTop_toTopOf="@id/checkbox_sehirveuniversitesec_2"
-        />
-    <CheckBox
-        android:id="@+id/checkbox_sehirveuniversitesec_3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1) Tercih Edilen Bölüm"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/checkbox_sehirveuniversitesec_2"
-        />
-    <CheckBox
-        android:id="@+id/checkbox_sehirveuniversitesec_03"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1) Tercih Edilen Bölüm"
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@id/checkbox_sehirveuniversitesec_3"
-        app:layout_constraintTop_toTopOf="@id/checkbox_sehirveuniversitesec_3"
-        />
-    <CheckBox
-        android:id="@+id/checkbox_sehirveuniversitesec_4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1) Tercih Edilen Bölüm"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/checkbox_sehirveuniversitesec_3"
-        />
-    <CheckBox
-        android:id="@+id/checkbox_sehirveuniversitesec_04"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1) Tercih Edilen Bölüm"
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@id/checkbox_sehirveuniversitesec_4"
-        app:layout_constraintTop_toTopOf="@id/checkbox_sehirveuniversitesec_4"
-        />
-    <CheckBox
-        android:id="@+id/checkbox_sehirveuniversitesec_5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1) Tercih Edilen Bölüm"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/checkbox_sehirveuniversitesec_4"
-        />
-    <CheckBox
-        android:id="@+id/checkbox_sehirveuniversitesec_05"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1) Tercih Edilen Bölüm"
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@id/checkbox_sehirveuniversitesec_5"
-        app:layout_constraintTop_toTopOf="@id/checkbox_sehirveuniversitesec_5"
-        />
-    <CheckBox
-        android:id="@+id/checkbox_sehirveuniversitesec_6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1) Tercih Edilen Bölüm"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/checkbox_sehirveuniversitesec_5"
-        />
-    <CheckBox
-        android:id="@+id/checkbox_sehirveuniversitesec_06"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1) Tercih Edilen Bölüm"
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@id/checkbox_sehirveuniversitesec_6"
-        app:layout_constraintTop_toTopOf="@id/checkbox_sehirveuniversitesec_6"
-        />
-    <CheckBox
-        android:id="@+id/checkbox_sehirveuniversitesec_7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1) Tercih Edilen Bölüm"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/checkbox_sehirveuniversitesec_6"
-        />
-    <CheckBox
-        android:id="@+id/checkbox_sehirveuniversitesec_07"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1) Tercih Edilen Bölüm"
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@id/checkbox_sehirveuniversitesec_7"
-        app:layout_constraintTop_toTopOf="@id/checkbox_sehirveuniversitesec_7"
-        />
-    <CheckBox
-        android:id="@+id/checkbox_sehirveuniversitesec_8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1) Tercih Edilen Bölüm"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/checkbox_sehirveuniversitesec_7"
-        />
-    <CheckBox
-        android:id="@+id/checkbox_sehirveuniversitesec_08"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1) Tercih Edilen Bölüm"
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@id/checkbox_sehirveuniversitesec_8"
-        app:layout_constraintTop_toTopOf="@id/checkbox_sehirveuniversitesec_8"
-        />
-    <CheckBox
-        android:id="@+id/checkbox_sehirveuniversitesec_9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1) Tercih Edilen Bölüm"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/checkbox_sehirveuniversitesec_8"
-        />
-    <CheckBox
-        android:id="@+id/checkbox_sehirveuniversitesec_09"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1) Tercih Edilen Bölüm"
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@id/checkbox_sehirveuniversitesec_9"
-        app:layout_constraintTop_toTopOf="@id/checkbox_sehirveuniversitesec_9"
-        />
-    <CheckBox
-        android:id="@+id/checkbox_sehirveuniversitesec_10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1) Tercih Edilen Bölüm"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/checkbox_sehirveuniversitesec_9"
-        />
-    <CheckBox
-        android:id="@+id/checkbox_sehirveuniversitesec_010"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1) Tercih Edilen Bölüm"
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@id/checkbox_sehirveuniversitesec_10"
-        app:layout_constraintTop_toTopOf="@id/checkbox_sehirveuniversitesec_10"
-        />
-    <CheckBox
-        android:id="@+id/checkbox_sehirveuniversitesec_11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1) Tercih Edilen Bölüm"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/checkbox_sehirveuniversitesec_10"
-        />
-    <CheckBox
-        android:id="@+id/checkbox_sehirveuniversitesec_011"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1) Tercih Edilen Bölüm"
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@id/checkbox_sehirveuniversitesec_11"
-        app:layout_constraintTop_toTopOf="@id/checkbox_sehirveuniversitesec_11"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/tercih_buddy" />
 
 
+    <ScrollView
+        android:id="@+id/sehirve_uni_scroll0"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
 
 
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_sehirveuniversitesecimi"
+        app:layout_constraintBottom_toTopOf="@+id/bolumlerigoster_sehiruni_button"
+        app:layout_constraintEnd_toEndOf="@+id/text_sehirveuniversitesecimi"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/checkbox_sehirveuniversitesec_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1) Tercih Edilen Bölüm"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_sehirveuniversitesecimi"
+
+                />
+
+            <CheckBox
+                android:id="@+id/checkbox_sehirveuniversitesec_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1) Tercih Edilen Bölüm"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/checkbox_sehirveuniversitesec_0" />
+
+            />
+
+            <CheckBox
+                android:id="@+id/checkbox_sehirveuniversitesec_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1) Tercih Edilen Bölüm"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/checkbox_sehirveuniversitesec_1" />
+
+            <CheckBox
+                android:id="@+id/checkbox_sehirveuniversitesec_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1) Tercih Edilen Bölüm"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/checkbox_sehirveuniversitesec_2" />
+
+            <CheckBox
+                android:id="@+id/checkbox_sehirveuniversitesec_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1) Tercih Edilen Bölüm"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/checkbox_sehirveuniversitesec_3" />
+
+            <CheckBox
+                android:id="@+id/checkbox_sehirveuniversitesec_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1) Tercih Edilen Bölüm"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/checkbox_sehirveuniversitesec_4" />
+
+            <CheckBox
+                android:id="@+id/checkbox_sehirveuniversitesec_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1) Tercih Edilen Bölüm"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/checkbox_sehirveuniversitesec_5" />
+
+            <CheckBox
+                android:id="@+id/checkbox_sehirveuniversitesec_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1) Tercih Edilen Bölüm"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/checkbox_sehirveuniversitesec_6" />
+
+            <CheckBox
+                android:id="@+id/checkbox_sehirveuniversitesec_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1) Tercih Edilen Bölüm"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/checkbox_sehirveuniversitesec_7" />
+
+            <CheckBox
+                android:id="@+id/checkbox_sehirveuniversitesec_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1) Tercih Edilen Bölüm"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/checkbox_sehirveuniversitesec_8" />
+
+            <CheckBox
+                android:id="@+id/checkbox_sehirveuniversitesec_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1) Tercih Edilen Bölüm"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/checkbox_sehirveuniversitesec_9" />
+
+            <CheckBox
+                android:id="@+id/checkbox_sehirveuniversitesec_11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1) Tercih Edilen Bölüm"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/checkbox_sehirveuniversitesec_10" />
+            <CheckBox
+                android:id="@+id/checkbox_sehirveuniversitesec_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1) Tercih Edilen Bölüm"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/checkbox_sehirveuniversitesec_9"
+                app:layout_constraintTop_toTopOf="@id/checkbox_sehirveuniversitesec_9" />
+
+            <CheckBox
+                android:id="@+id/checkbox_sehirveuniversitesec_13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1) Tercih Edilen Bölüm"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/checkbox_sehirveuniversitesec_10"
+                app:layout_constraintTop_toTopOf="@id/checkbox_sehirveuniversitesec_10" />
+
+            <CheckBox
+                android:id="@+id/checkbox_sehirveuniversitesec_14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1) Tercih Edilen Bölüm"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/checkbox_sehirveuniversitesec_11"
+                app:layout_constraintTop_toTopOf="@id/checkbox_sehirveuniversitesec_11" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/sehirve_uni_scroll1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
 
 
+        app:layout_constraintStart_toEndOf="@id/sehirve_uni_scroll0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_sehirveuniversitesecimi"
+        app:layout_constraintBottom_toTopOf="@+id/bolumlerigoster_sehiruni_button"
+        >
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/checkbox_sehirveuniversitesec_00"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1) Tercih Edilen Bölüm"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/checkbox_sehirveuniversitesec_0"
+                app:layout_constraintTop_toTopOf="@id/checkbox_sehirveuniversitesec_0" />
+
+            <CheckBox
+                android:id="@+id/checkbox_sehirveuniversitesec_01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1) Tercih Edilen Bölüm"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/checkbox_sehirveuniversitesec_1"
+                app:layout_constraintTop_toTopOf="@id/checkbox_sehirveuniversitesec_1" />
+
+            <CheckBox
+                android:id="@+id/checkbox_sehirveuniversitesec_02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1) Tercih Edilen Bölüm"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/checkbox_sehirveuniversitesec_2"
+                app:layout_constraintTop_toTopOf="@id/checkbox_sehirveuniversitesec_2" />
+
+            <CheckBox
+                android:id="@+id/checkbox_sehirveuniversitesec_03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1) Tercih Edilen Bölüm"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/checkbox_sehirveuniversitesec_3"
+                app:layout_constraintTop_toTopOf="@id/checkbox_sehirveuniversitesec_3" />
+
+            <CheckBox
+                android:id="@+id/checkbox_sehirveuniversitesec_04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1) Tercih Edilen Bölüm"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/checkbox_sehirveuniversitesec_4"
+                app:layout_constraintTop_toTopOf="@id/checkbox_sehirveuniversitesec_4" />
+
+            <CheckBox
+                android:id="@+id/checkbox_sehirveuniversitesec_05"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1) Tercih Edilen Bölüm"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/checkbox_sehirveuniversitesec_5"
+                app:layout_constraintTop_toTopOf="@id/checkbox_sehirveuniversitesec_5" />
+
+            <CheckBox
+                android:id="@+id/checkbox_sehirveuniversitesec_06"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1) Tercih Edilen Bölüm"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/checkbox_sehirveuniversitesec_6"
+                app:layout_constraintTop_toTopOf="@id/checkbox_sehirveuniversitesec_6" />
+
+            <CheckBox
+                android:id="@+id/checkbox_sehirveuniversitesec_07"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1) Tercih Edilen Bölüm"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/checkbox_sehirveuniversitesec_7"
+                app:layout_constraintTop_toTopOf="@id/checkbox_sehirveuniversitesec_7" />
+
+            <CheckBox
+                android:id="@+id/checkbox_sehirveuniversitesec_08"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1) Tercih Edilen Bölüm"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/checkbox_sehirveuniversitesec_8"
+                app:layout_constraintTop_toTopOf="@id/checkbox_sehirveuniversitesec_8" />
+
+            <CheckBox
+                android:id="@+id/checkbox_sehirveuniversitesec_09"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1) Tercih Edilen Bölüm"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/checkbox_sehirveuniversitesec_9"
+                app:layout_constraintTop_toTopOf="@id/checkbox_sehirveuniversitesec_9" />
+
+            <CheckBox
+                android:id="@+id/checkbox_sehirveuniversitesec_010"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1) Tercih Edilen Bölüm"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/checkbox_sehirveuniversitesec_10"
+                app:layout_constraintTop_toTopOf="@id/checkbox_sehirveuniversitesec_10" />
+
+            <CheckBox
+                android:id="@+id/checkbox_sehirveuniversitesec_011"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1) Tercih Edilen Bölüm"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/checkbox_sehirveuniversitesec_11"
+                app:layout_constraintTop_toTopOf="@id/checkbox_sehirveuniversitesec_11" />
+            <CheckBox
+                android:id="@+id/checkbox_sehirveuniversitesec_012"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1) Tercih Edilen Bölüm"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/checkbox_sehirveuniversitesec_9"
+                app:layout_constraintTop_toTopOf="@id/checkbox_sehirveuniversitesec_9" />
+
+            <CheckBox
+                android:id="@+id/checkbox_sehirveuniversitesec_013"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1) Tercih Edilen Bölüm"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/checkbox_sehirveuniversitesec_10"
+                app:layout_constraintTop_toTopOf="@id/checkbox_sehirveuniversitesec_10" />
+
+            <CheckBox
+                android:id="@+id/checkbox_sehirveuniversitesec_014"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1) Tercih Edilen Bölüm"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/checkbox_sehirveuniversitesec_11"
+                app:layout_constraintTop_toTopOf="@id/checkbox_sehirveuniversitesec_11" />
+        </LinearLayout>
+    </ScrollView>
     />
     <Button
-        android:id="@+id/bölumlerigoster_sehiruni_button"
-        android:layout_width="match_parent"
+        android:id="@+id/seherveuni_ana_menu_button"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+        android:layout_marginStart="100px"
+        android:text="@string/ana_men"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    <Button
+        android:id="@+id/bolumlerigoster_sehiruni_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/b_l_mleri_g_ster"
         android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
 
         />
