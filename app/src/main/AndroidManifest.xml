@@ -13,6 +13,13 @@
         android:theme="@style/Theme.TercihBuddy"
         tools:targetApi="31">
         <activity
+            android:name=".MainActivity2"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".register"
             android:exported="false">
             <meta-data
@@ -56,13 +63,6 @@
         </activity>
         <activity
             android:name=".Tercih_Listem"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".MainActivity2"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

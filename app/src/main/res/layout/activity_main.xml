@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity2">
+
     <TextView
         android:id="@+id/tercih_buddy"
         android:layout_width="match_parent"
@@ -15,70 +16,52 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-
         />
-    <TextView
-        android:id="@+id/main_text"
+
+    <EditText
+        android:id="@+id/login_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/uyari"
+        android:layout_marginTop="200dp"
+        android:hint="Username"
+        android:inputType="text"
         android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@+id/tercih_buddy"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/sehir_ve_universite_secimi_button"
-        />
-
-    <Button
-        android:id="@+id/sehir_ve_universite_secimi_button"
+        app:layout_constraintTop_toBottomOf="@+id/tercih_buddy" />
+    <EditText
+        android:id="@+id/login_Password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="30dp"
-        android:text="@string/ehir_ve_niversite_se_imi"
-        android:onClick="sehirveuniversitesecimi"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@id/alanlar_bölümler_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginTop="60dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_username" />
 
     <Button
-        android:id="@+id/alanlar_bölümler_button"
+        android:id="@+id/login_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="alanlarbolumler"
-        android:paddingBottom="30dp"
 
-        android:text="@string/alanlar_b_l_mler"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@id/arama_kriterleri_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginTop="60dp"
+        android:text="Log In"
+        android:textColor="@android:color/background_light"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_Password" />
 
-    <Button
-        android:id="@+id/arama_kriterleri_button"
+    <TextView
+
+        android:id="@+id/txt_dont_have_account"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="arama_kriterleri"
-        android:paddingBottom="30dp"
-
-        android:text="@string/arama_kriterleri_text"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@id/tercih_listem"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/tercih_listem"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="buttonTercihListesi"
-        android:paddingBottom="30dp"
-        android:text="@string/tercih_listem"
-
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginTop="10dp"
+        android:text="Don't have an account ? REGISTER"
+        android:textAlignment="textEnd"
+        app:layout_constraintTop_toBottomOf="@+id/login_button"
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
