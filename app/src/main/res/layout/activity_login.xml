@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp"
-    tools:context=".register">
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,54 +16,53 @@
 
 
         <EditText
-            android:id="@+id/edt_register_username"
+            android:id="@+id/edt_user_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="enter_your_username"
-            android:inputType="text"
-            android:textSize="20sp"
-            android:layout_marginTop="10dp"/>
-
-        <EditText
-            android:id="@+id/edt_register_email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:hint="enter_your_e_mail_address"
             android:inputType="textEmailAddress"
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/edt_register_password"
+            android:id="@+id/edt_user_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:hint="enter_your_password"
             android:inputType="textPassword"
             android:textSize="20sp" />
 
-        <EditText
-            android:id="@+id/edt_register_re_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="confirm_your_password"
-            android:inputType="textPassword"
-            android:textSize="20sp" />
-
-        <Button
-            android:id="@+id/btn_register"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="create_new_account"
-            android:textSize="20sp" />
-
         <TextView
-            android:id="@+id/txt_have_account"
+            android:id="@+id/txt_forgot_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="i_have_an_account"
+            android:text="i_forgot_my_password"
             android:textAlignment="textEnd"
             android:textSize="16sp"
             android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="login"
+
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txt_new_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="i_don_t_have_an_account"
+            android:textAlignment="textEnd"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
     </LinearLayout>
+
+
 </RelativeLayout>

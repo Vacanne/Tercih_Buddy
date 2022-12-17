@@ -1,7 +1,7 @@
 {
-
   "project_info": {
     "project_number": "806125434558",
+    "firebase_url": "https://tercih-buddy-default-rtdb.firebaseio.com",
     "project_id": "tercih-buddy",
     "storage_bucket": "tercih-buddy.appspot.com"
   },
@@ -37,5 +37,4 @@
     }
   ],
   "configuration_version": "1"
-
 }

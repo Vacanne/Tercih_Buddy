@@ -6,16 +6,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import com.google.firebase.firestore.FirebaseFirestore;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button login_button;
-    private TextView login_register;
-    private EditText login_username, login_password;
+public class MainActivity extends AppCompatActivity {
+
+    private Button tercihlistem_button;
+    private Button aramakriterleri_button;
+    private Button alanlarbolumler_button;
+    private Button sehirveuniversitesecimi_button;
 
 
     @Override
@@ -23,33 +23,61 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        login_button = (Button) findViewById(R.id.login_button) ;
-        login_register = (TextView) findViewById(R.id.txt_dont_have_account);
-        login_register.setOnClickListener(this);
 
-        login_button.setOnClickListener(new View.OnClickListener() {
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+        sehirveuniversitesecimi_button = findViewById(R.id.sehir_ve_universite_secimi_button);
+        tercihlistem_button = findViewById(R.id.tercih_listem);
+        aramakriterleri_button = findViewById(R.id.arama_kriterleri_button);
+        alanlarbolumler_button = findViewById(R.id.alanlar_bölümler_button);
+
+
+        sehirveuniversitesecimi_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openMainAc();
+                Intent intent = new Intent(MainActivity.this,sehirveuniversitesecimi.class);
+                startActivity(intent);
             }
         });
 
+        tercihlistem_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                tercihlistemactivityopen();
+            }
+        });
+        aramakriterleri_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                aramakriterleri_activityyopen();
+            }
+        });
+
+        alanlarbolumler_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                alanlarbolumler_activityopen();
+            }
+        });
+    }
+
+    public void opensehirveuniversitesecimi() {
 
     }
 
-    public void openMainAc(){
-        Intent intent = new Intent (this, MainActivity2.class);
+    public void tercihlistemactivityopen() {
+        Intent intent = new Intent(this, Tercih_Listem.class);
         startActivity(intent);
-
     }
 
-
-
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()){
-            case R.id.txt_dont_have_account:
-                startActivity(new Intent(this, register.class));
-        }
+    public void aramakriterleri_activityyopen() {
+        Intent intent = new Intent(this, arama_kriterleri.class);
+        startActivity(intent);
     }
+
+    public void alanlarbolumler_activityopen() {
+        Intent intent = new Intent(this, alanlarbolumler.class);
+        startActivity(intent);
+    }
+
 }
