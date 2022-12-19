@@ -22,7 +22,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.HashMap;
 
 public class register extends AppCompatActivity {
-    private EditText regUserName, regUserEmail, regUserPassword, regUserRepassword;
+    private EditText regUserName, regUserEmail, regUserPassword, regUserRepassword,regPhoneNumber;
     private DatabaseReference rootReference;
     private FirebaseAuth myAuth;
     private Button btnCreateRegister;
@@ -39,6 +39,7 @@ public class register extends AppCompatActivity {
         regUserEmail = findViewById(R.id.edt_register_email);
         regUserPassword = findViewById(R.id.edt_register_password);
         regUserRepassword = findViewById(R.id.edt_register_re_password);
+        regPhoneNumber = findViewById(R.id.edt_register_phone);
         TextView haveAccount = findViewById(R.id.txt_have_account);
 
         haveAccount.setOnClickListener(new View.OnClickListener() {
@@ -61,6 +62,7 @@ public class register extends AppCompatActivity {
         String email = regUserEmail.getText().toString();
         String password = regUserPassword.getText().toString();
         String rePassword = regUserRepassword.getText().toString();
+        String phoneNumber = regPhoneNumber.getText().toString();
 
         if (TextUtils.isEmpty(username)) {
             Toast.makeText(this, "Username cannot be empty...!!!", Toast.LENGTH_SHORT).show();
@@ -70,7 +72,13 @@ public class register extends AppCompatActivity {
             Toast.makeText(this, "Password fields cannot be empty...!!!", Toast.LENGTH_SHORT).show();
         } else if (!password.equals(rePassword)) {
             Toast.makeText(this, "Passwords aren't the same", Toast.LENGTH_SHORT).show();
-        } else {
+        } else if (TextUtils.isEmpty(phoneNumber)) {
+            Toast.makeText(this, "Phone Number cannot be empty", Toast.LENGTH_SHORT).show();
+            //!android.telephony.PhoneNumberUtils.isGlobalPhoneNumber(phoneNumber)
+        }else if (phoneNumber.length() != 10){
+            Toast.makeText(this, "Please enter the valid telephone number!!", Toast.LENGTH_SHORT).show();
+        }
+        else {
 
             btnCreateRegister.setEnabled(false);
             myAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -86,13 +94,14 @@ public class register extends AppCompatActivity {
                         profileMap.put("uid_tb", activeUserID);
                         profileMap.put("uname_tb", username);
                         profileMap.put("mail_tb", email);
-                        profileMap.put("status_tb", "");
                         profileMap.put("isActive_tb", "ON");
+                        profileMap.put("Tercih_list","" );
 
                         rootReference.child("Users_tb").child(activeUserID).setValue(profileMap);
 
-                        //Users users=new Users("ON",email, "mesgul", activeUserID, username);
-                        //Toast.makeText(RegisterActivity.this, "users", Toast.LENGTH_SHORT).show();
+
+
+
 
                         Intent mainIntent = new Intent(register.this, LoginActivity.class);
                         mainIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);

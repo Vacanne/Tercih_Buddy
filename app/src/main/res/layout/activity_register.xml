@@ -12,12 +12,19 @@
         android:orientation="vertical">
 
 
+        <TextView
+            android:id="@+id/tercih_buddy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tercih_buddy"
+            android:textSize="34sp"
 
+            />
         <EditText
             android:id="@+id/edt_register_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="enter_your_username"
+            android:hint="Username"
             android:inputType="text"
             android:textSize="20sp"
             android:layout_marginTop="10dp"/>
@@ -26,15 +33,21 @@
             android:id="@+id/edt_register_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="enter_your_e_mail_address"
+            android:hint="Email"
             android:inputType="textEmailAddress"
             android:textSize="20sp" />
-
+        <EditText
+            android:id="@+id/edt_register_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone Number"
+            android:inputType="phone"
+            android:textSize="20sp" />
         <EditText
             android:id="@+id/edt_register_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="enter_your_password"
+            android:hint="Password"
             android:inputType="textPassword"
             android:textSize="20sp" />
 
@@ -42,7 +55,7 @@
             android:id="@+id/edt_register_re_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="confirm_your_password"
+            android:hint="Confirm Your Password"
             android:inputType="textPassword"
             android:textSize="20sp" />
 
@@ -51,7 +64,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="create_new_account"
+            android:text="Register"
             android:textSize="20sp" />
 
         <TextView
@@ -59,7 +72,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="i_have_an_account"
+            android:text="If You Have Account Click Here"
             android:textAlignment="textEnd"
             android:textSize="16sp"
             android:textStyle="bold" />

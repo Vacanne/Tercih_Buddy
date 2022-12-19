@@ -24,13 +24,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
+
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
         sehirveuniversitesecimi_button = findViewById(R.id.sehir_ve_universite_secimi_button);
         tercihlistem_button = findViewById(R.id.tercih_listem);
         aramakriterleri_button = findViewById(R.id.arama_kriterleri_button);
         alanlarbolumler_button = findViewById(R.id.alanlar_bölümler_button);
-
 
         sehirveuniversitesecimi_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
         tercihlistem_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -52,24 +51,22 @@ public class MainActivity extends AppCompatActivity {
                 aramakriterleri_activityyopen();
             }
         });
-
         alanlarbolumler_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 alanlarbolumler_activityopen();
             }
         });
+
     }
 
     public void opensehirveuniversitesecimi() {
 
     }
-
     public void tercihlistemactivityopen() {
         Intent intent = new Intent(this, Tercih_Listem.class);
         startActivity(intent);
     }
-
     public void aramakriterleri_activityyopen() {
         Intent intent = new Intent(this, arama_kriterleri.class);
         startActivity(intent);

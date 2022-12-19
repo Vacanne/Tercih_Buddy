@@ -14,13 +14,23 @@
         android:orientation="vertical">
 
 
+        <TextView
+            android:id="@+id/tercih_buddy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tercih_buddy"
+            android:textSize="34sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
 
+            />
         <EditText
             android:id="@+id/edt_user_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:hint="enter_your_e_mail_address"
+            android:hint="Email"
             android:inputType="textEmailAddress"
             android:textSize="20sp" />
 
@@ -29,7 +39,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:hint="enter_your_password"
+            android:hint="Password"
             android:inputType="textPassword"
             android:textSize="20sp" />
 
@@ -38,7 +48,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="i_forgot_my_password"
+            android:text="Forgot Password"
             android:textAlignment="textEnd"
             android:textSize="16sp"
             android:textStyle="bold" />
@@ -48,7 +58,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="login"
+            android:text="LOGIN"
 
             android:textSize="20sp" />
 
@@ -57,7 +67,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="i_don_t_have_an_account"
+            android:text="Don't Have Account"
             android:textAlignment="textEnd"
             android:textSize="16sp"
             android:textStyle="bold" />
