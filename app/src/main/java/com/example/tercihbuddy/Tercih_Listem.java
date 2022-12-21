@@ -1,12 +1,23 @@
+/*
+Author: Mustafa Can Ince
+ */
+
 package com.example.tercihbuddy;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class Tercih_Listem extends AppCompatActivity {
 
@@ -21,6 +32,9 @@ public class Tercih_Listem extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tercih_listem);
+
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference ref = database.getReference("kullanıcılar");
 
         anamenu_button = (Button) findViewById(R.id.ana_menu);
         tercihlistemdenkaldir_button    = (Button) findViewById(R.id.tercih_listemden_kaldır);
@@ -57,12 +71,32 @@ public class Tercih_Listem extends AppCompatActivity {
                 openMain_activity();
             }
         });
+
+        ref.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // Veritabanındaki veriler değiştiğinde burası çalışır
+                // Veritabanındaki verileri okumak için dataSnapshot nesnesini kullanın
+
+                for (DataSnapshot childSnapshot: dataSnapshot.getChildren()) {
+                    String name = childSnapshot.child("ad").getValue(String.class);
+                    Log.d("TAG", "Kullanıcı adı: " + name);
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // İşlem iptal edildiğinde burası çalışır
+            }
+        });
+
     }
     public void openMain_activity(){
         Intent intent = new Intent (this, MainActivity.class);
         startActivity(intent);
 
     }
+
 
 
 

@@ -1,3 +1,6 @@
+/*
+Author: Mustafa Can Ince
+ */
 package com.example.tercihbuddy;
 
 import androidx.annotation.NonNull;
@@ -95,7 +98,7 @@ public class register extends AppCompatActivity {
                         profileMap.put("uname_tb", username);
                         profileMap.put("mail_tb", email);
                         profileMap.put("isActive_tb", "ON");
-                        profileMap.put("Tercih_list","" );
+                        profileMap.put("Tercih_list",null);
 
                         rootReference.child("Users_tb").child(activeUserID).setValue(profileMap);
 

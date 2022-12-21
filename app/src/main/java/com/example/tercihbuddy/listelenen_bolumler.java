@@ -1,3 +1,6 @@
+/*
+Author: Mustafa Can Ince
+ */
 package com.example.tercihbuddy;
 
 import androidx.annotation.NonNull;
@@ -11,11 +14,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
 
 public class listelenen_bolumler extends AppCompatActivity {
     FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -26,27 +36,36 @@ public class listelenen_bolumler extends AppCompatActivity {
             listbol_checkBox6, listbol_checkBox7, listbol_checkBox8, listbol_checkBox9, listbol_checkBox10, listbol_checkBox11, listbol_checkBox12, listbol_checkBox13,
             listbol_checkBox14, listbol_checkBox15, listbol_checkBox16, listbol_checkBox17, listbol_checkBox18, listbol_checkBox19, listbol_checkBox20, listbol_checkBox21,
             listbol_checkBox22, listbol_checkBox23, listbol_checkBox24;
+    private FirebaseAuth myAuth;
+    private FirebaseUser activeUser;
+    private String activeUsername;
+    private DatabaseReference userPath;
+    String activeUserID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.listelenen_bolumler);
 
+        myAuth = FirebaseAuth.getInstance();
+        activeUser = myAuth.getCurrentUser();
+
         tercihlistemeekle_button = (Button) findViewById(R.id.listbol_tercih_listeme_ekle_button);
         listbol_ana_menu_button = (Button) findViewById(R.id.listbol_ana_menu_button);
         tercih_listem = (Button) findViewById(R.id.listbol_tercih_listem_button);
 
 
-        listbol_checkBox0 = (CheckBox) findViewById(R.id.checkbox_listelenenblomler_0);
-        listbol_checkBox1 = (CheckBox) findViewById(R.id.checkbox_listelenenblomler_1);
-        listbol_checkBox2 = (CheckBox) findViewById(R.id.checkbox_listelenenblomler_2);
-        listbol_checkBox3 = (CheckBox) findViewById(R.id.checkbox_listelenenblomler_3);
-        listbol_checkBox4 = (CheckBox) findViewById(R.id.checkbox_listelenenblomler_4);
-        listbol_checkBox5 = (CheckBox) findViewById(R.id.checkbox_listelenenblomler_5);
-        listbol_checkBox6 = (CheckBox) findViewById(R.id.checkbox_listelenenblomler_6);
-        listbol_checkBox7 = (CheckBox) findViewById(R.id.checkbox_listelenenblomler_7);
-        listbol_checkBox8 = (CheckBox) findViewById(R.id.checkbox_listelenenblomler_8);
-        listbol_checkBox9 = (CheckBox) findViewById(R.id.checkbox_listelenenblomler_9);
+
+        listbol_checkBox0  = (CheckBox) findViewById(R.id.checkbox_listelenenblomler_0);
+        listbol_checkBox1  = (CheckBox) findViewById(R.id.checkbox_listelenenblomler_1);
+        listbol_checkBox2  = (CheckBox) findViewById(R.id.checkbox_listelenenblomler_2);
+        listbol_checkBox3  = (CheckBox) findViewById(R.id.checkbox_listelenenblomler_3);
+        listbol_checkBox4  = (CheckBox) findViewById(R.id.checkbox_listelenenblomler_4);
+        listbol_checkBox5  = (CheckBox) findViewById(R.id.checkbox_listelenenblomler_5);
+        listbol_checkBox6  = (CheckBox) findViewById(R.id.checkbox_listelenenblomler_6);
+        listbol_checkBox7  = (CheckBox) findViewById(R.id.checkbox_listelenenblomler_7);
+        listbol_checkBox8  = (CheckBox) findViewById(R.id.checkbox_listelenenblomler_8);
+        listbol_checkBox9  = (CheckBox) findViewById(R.id.checkbox_listelenenblomler_9);
         listbol_checkBox10 = (CheckBox) findViewById(R.id.checkbox_listelenenblomler_10);
         listbol_checkBox11 = (CheckBox) findViewById(R.id.checkbox_listelenenblomler_11);
         listbol_checkBox12 = (CheckBox) findViewById(R.id.checkbox_listelenenblomler_12);
@@ -112,8 +131,9 @@ public class listelenen_bolumler extends AppCompatActivity {
     }
 
     String[] checkbox_list21 = {};
-    String aa = "";
 
+    String fin = "";
+    String sep = ",";
 
     /*
     String ab = listbol_checkBox0.toString();
@@ -137,88 +157,196 @@ public class listelenen_bolumler extends AppCompatActivity {
 
 
     public void tercihlistemeekle_func() {
+        activeUserID = myAuth.getCurrentUser().getUid();
+
+        userPath = FirebaseDatabase.getInstance().getReference().child("Users_tb");
+        String groupKey = userPath.push().getKey();
+
+        DatabaseReference messagesKeyPath = userPath.child(groupKey);
+
+        HashMap<String, Object> profileMap = new HashMap<>();
+        userPath.updateChildren(profileMap);
         if (listbol_checkBox0.isChecked()) {
-            System.out.println("deneme");
-            aa = listbol_checkBox1.toString();
-            db.collection("/1/JKR7wLb334TYX4lK59t6").document().set(aa);
+            fin = fin + (String) listbol_checkBox0.getText();
+            fin = sep + fin + sep;
+            profileMap.put("uname_tb",activeUsername);
+            profileMap.put("Tercih_list", fin);
+            messagesKeyPath.updateChildren(profileMap);
+            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
 
         }
         if (listbol_checkBox1.isChecked()) {
-            aa = listbol_checkBox1.toString();
-            db.collection("/1/JKR7wLb334TYX4lK59t6").add(aa);
+            fin = fin + (String) listbol_checkBox1.getText();
+            fin = sep + fin + sep;
+            profileMap.put("Tercih_list", fin);
+            messagesKeyPath.updateChildren(profileMap);
+            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
         }
-
-
         if (listbol_checkBox2.isChecked()) {
-            aa = listbol_checkBox2.toString();
+            fin = fin + (String) listbol_checkBox2.getText();
+            fin = sep + fin + sep;
+            profileMap.put("Tercih_list", fin);
+            messagesKeyPath.updateChildren(profileMap);
+            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
         }
         if (listbol_checkBox3.isChecked()) {
-            aa = listbol_checkBox3.toString().toString();
+            fin = fin + (String) listbol_checkBox3.getText();
+            fin = sep + fin + sep;
+            profileMap.put("Tercih_list", fin);
+            messagesKeyPath.updateChildren(profileMap);
+            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
         }
         if (listbol_checkBox4.isChecked()) {
-            aa = listbol_checkBox4.toString().toString();
+            fin = fin + (String) listbol_checkBox4.getText();
+            fin = sep + fin + sep;
+            profileMap.put("Tercih_list", fin);
+            messagesKeyPath.updateChildren(profileMap);
+            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
         }
         if (listbol_checkBox5.isChecked()) {
-            aa = listbol_checkBox5.toString().toString();
+            fin = fin + (String) listbol_checkBox5.getText();
+            fin = sep + fin + sep;
+            profileMap.put("Tercih_list", fin);
+            messagesKeyPath.updateChildren(profileMap);
+            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
         }
         if (listbol_checkBox6.isChecked()) {
-            aa = listbol_checkBox6.toString().toString();
+            fin = fin + (String) listbol_checkBox6.getText();
+            fin = sep + fin + sep;
+            profileMap.put("Tercih_list", fin);
+            messagesKeyPath.updateChildren(profileMap);
+            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
         }
         if (listbol_checkBox7.isChecked()) {
-            aa = listbol_checkBox7.toString().toString();
+            fin = fin + (String) listbol_checkBox7.getText();
+            fin = sep + fin + sep;
+            profileMap.put("Tercih_list", fin);
+            messagesKeyPath.updateChildren(profileMap);
+            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
         }
         if (listbol_checkBox8.isChecked()) {
-            aa = listbol_checkBox8.toString().toString();
+            fin = fin + (String) listbol_checkBox8.getText();
+            fin = sep + fin + sep;
+            profileMap.put("Tercih_list", fin);
+            messagesKeyPath.updateChildren(profileMap);
+            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
         }
         if (listbol_checkBox9.isChecked()) {
-            aa = listbol_checkBox9.toString().toString();
+            fin = fin + (String) listbol_checkBox9.getText();
+            fin = sep + fin + sep;
+            profileMap.put("Tercih_list", fin);
+            messagesKeyPath.updateChildren(profileMap);
+            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
         }
         if (listbol_checkBox10.isChecked()) {
-            aa = listbol_checkBox10.toString().toString();
+            fin = fin + (String) listbol_checkBox10.getText();
+            fin = sep + fin + sep;
+            profileMap.put("Tercih_list", fin);
+            messagesKeyPath.updateChildren(profileMap);
+            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
         }
         if (listbol_checkBox11.isChecked()) {
-            aa = listbol_checkBox11.toString().toString();
+            fin = fin + (String) listbol_checkBox11.getText();
+            fin = sep + fin + sep;
+            profileMap.put("Tercih_list", fin);
+            messagesKeyPath.updateChildren(profileMap);
+            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
         }
         if (listbol_checkBox12.isChecked()) {
-            aa = listbol_checkBox12.toString().toString();
+            fin = fin + (String) listbol_checkBox12.getText();
+            fin = sep + fin + sep;
+            profileMap.put("Tercih_list", fin);
+            messagesKeyPath.updateChildren(profileMap);
+            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
         }
         if (listbol_checkBox13.isChecked()) {
-            aa = listbol_checkBox13.toString().toString();
+            fin = fin + (String) listbol_checkBox13.getText();
+            fin = sep + fin + sep;
+            profileMap.put("Tercih_list", fin);
+            messagesKeyPath.updateChildren(profileMap);
+            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
         }
         if (listbol_checkBox14.isChecked()) {
-            aa = listbol_checkBox14.toString().toString();
+            fin = fin + (String) listbol_checkBox14.getText();
+            fin = sep + fin + sep;
+            profileMap.put("Tercih_list", fin);
+            messagesKeyPath.updateChildren(profileMap);
+            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
         }
         if (listbol_checkBox15.isChecked()) {
-            aa = listbol_checkBox15.toString().toString();
+            fin = fin + (String) listbol_checkBox15.getText();
+            fin = sep + fin + sep;
+            profileMap.put("Tercih_list", fin);
+            messagesKeyPath.updateChildren(profileMap);
+            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
         }
         if (listbol_checkBox16.isChecked()) {
-            aa = listbol_checkBox16.toString().toString();
+            fin = fin + (String) listbol_checkBox16.getText();
+            fin = sep + fin + sep;
+            profileMap.put("Tercih_list", fin);
+            messagesKeyPath.updateChildren(profileMap);
+            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
         }
         if (listbol_checkBox17.isChecked()) {
-            aa = listbol_checkBox17.toString().toString();
+            fin = fin + (String) listbol_checkBox17.getText();
+            fin = sep + fin + sep;
+            profileMap.put("Tercih_list", fin);
+            messagesKeyPath.updateChildren(profileMap);
+            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
         }
         if (listbol_checkBox18.isChecked()) {
-            aa = listbol_checkBox18.toString().toString();
+            fin = fin + (String) listbol_checkBox18.getText();
+            fin = sep + fin + sep;
+            profileMap.put("Tercih_list", fin);
+            messagesKeyPath.updateChildren(profileMap);
+            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
         }
         if (listbol_checkBox19.isChecked()) {
-            aa = listbol_checkBox19.toString().toString();
+            fin = fin + (String) listbol_checkBox19.getText();
+            fin = sep + fin + sep;
+            profileMap.put("Tercih_list", fin);
+            messagesKeyPath.updateChildren(profileMap);
+            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
         }
         if (listbol_checkBox20.isChecked()) {
-            aa = listbol_checkBox20.toString().toString();
+            fin = fin + (String) listbol_checkBox20.getText();
+            fin = sep + fin + sep;
+            profileMap.put("Tercih_list", fin);
+            messagesKeyPath.updateChildren(profileMap);
+            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
         }
         if (listbol_checkBox21.isChecked()) {
-            aa = listbol_checkBox21.toString().toString();
+            fin = fin + (String) listbol_checkBox21.getText();
+            fin = sep + fin + sep;
+            profileMap.put("Tercih_list", fin);
+            messagesKeyPath.updateChildren(profileMap);
+            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
         }
         if (listbol_checkBox22.isChecked()) {
-            aa = listbol_checkBox22.toString().toString();
+            fin = fin + (String) listbol_checkBox22.getText();
+            fin = sep + fin + sep;
+            profileMap.put("Tercih_list", fin);
+            messagesKeyPath.updateChildren(profileMap);
+            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
         }
         if (listbol_checkBox23.isChecked()) {
-            aa = listbol_checkBox23.toString().toString();
+            fin = fin + (String) listbol_checkBox23.getText();
+            fin = sep + fin + sep;
+            profileMap.put("Tercih_list", fin);
+            messagesKeyPath.updateChildren(profileMap);
+            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
         }
         if (listbol_checkBox24.isChecked()) {
-            aa = listbol_checkBox24.toString().toString();
+            fin = fin + (String) listbol_checkBox24.getText();
+            fin = sep + fin + sep;
+            profileMap.put("Tercih_list", fin);
+            messagesKeyPath.updateChildren(profileMap);
+            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
         } else {
-            //toast for tercih_liste.
+            Toast.makeText(listelenen_bolumler.this, "Bolum secilmedigi icin eklenme islemi gerceklestirelemedi.", Toast.LENGTH_LONG).show();
         }
     }
+
+
+
 }

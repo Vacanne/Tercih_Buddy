@@ -1,3 +1,6 @@
+/*
+Author: Mustafa Can Ince
+ */
 package com.example.tercihbuddy;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -78,3 +81,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
 }
+
+
+
+/*
+protected void onStart() {
+        super.onStart();
+
+        if (activeUser == null) {
+            Intent loginIntent = new Intent(MainActivity.this, LoginActivity.class);
+            loginIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            finish();
+            startActivity(loginIntent);
+        } else {
+            haveUsers();
+            userisActive("ON");
+        }
+    }
+ */

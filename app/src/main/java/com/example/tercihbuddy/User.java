@@ -1,3 +1,6 @@
+/*
+Author: Mustafa Can Ince
+ */
 package com.example.tercihbuddy;
 
 import java.util.List;
