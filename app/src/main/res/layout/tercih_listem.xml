@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tercihlistem_constraintlayout"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
+
+
+
     <TextView
         android:id="@+id/tercih_buddy"
         android:layout_width="match_parent"
@@ -29,12 +33,14 @@
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:id="@+id/tercihlistem_scrollview"
         app:layout_constraintBottom_toTopOf="@+id/tercih_listemden_kaldır"
         app:layout_constraintStart_toStartOf="@+id/textView_tercihlistem"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_tercihlistem"
         >
         <LinearLayout
+            android:id="@+id/tercihlistem_linearlayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -46,133 +52,133 @@
                 android:layout_height="wrap_content"
                 android:text="1) Tercih Edilen Bolum"
                 android:textSize="12sp"
-                android:visibility="invisible"/>
+                />
             <CheckBox
                 android:id="@+id/checkbox_tercihlistem_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="2) Tercih Edilen Bolum"
                 android:textSize="12sp"
-                android:visibility="invisible"/>
+                />
             <CheckBox
                 android:id="@+id/checkbox_tercihlistem_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="3) Tercih Edilen Bolum"
                 android:textSize="12sp"
-                android:visibility="invisible"/>
+                />
             <CheckBox
                 android:id="@+id/checkbox_tercihlistem_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="4) Tercih Edilen Bolum"
                 android:textSize="12sp"
-                android:visibility="invisible"/>
+                />
             <CheckBox
                 android:id="@+id/checkbox_tercihlistem_4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="5) Tercih Edilen Bolum"
                 android:textSize="12sp"
-                android:visibility="invisible"/>
+                />
             <CheckBox
                 android:id="@+id/checkbox_tercihlistem_5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="6) Tercih Edilen Bolum"
                 android:textSize="12sp"
-                android:visibility="invisible"/>
+                />
             <CheckBox
                 android:id="@+id/checkbox_tercihlistem_6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="7) Tercih Edilen Bolum"
                 android:textSize="12sp"
-                android:visibility="invisible"/>
+                />
             <CheckBox
                 android:id="@+id/checkbox_tercihlistem_7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="8) Tercih Edilen Bolum"
                 android:textSize="12sp"
-                android:visibility="invisible"/>
+                />
             <CheckBox
                 android:id="@+id/checkbox_tercihlistem_8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="9) Tercih Edilen Bolum"
                 android:textSize="12sp"
-                android:visibility="invisible"/>
+                />
             <CheckBox
                 android:id="@+id/checkbox_tercihlistem_9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="10) Tercih Edilen Bolum"
                 android:textSize="12sp"
-                android:visibility="invisible"/>
+                />
             <CheckBox
                 android:id="@+id/checkbox_tercihlistem_10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="11) Tercih Edilen Bolum"
                 android:textSize="12sp"
-                android:visibility="invisible"/>
+                />
             <CheckBox
                 android:id="@+id/checkbox_tercihlistem_11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="12) Tercih Edilen Bolum"
                 android:textSize="12sp"
-                android:visibility="invisible"/>
+                />
             <CheckBox
                 android:id="@+id/checkbox_tercihlistem_12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="13) Tercih Edilen Bolum"
                 android:textSize="12sp"
-                android:visibility="invisible"/>
+                />
             <CheckBox
                 android:id="@+id/checkbox_tercihlistem_13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="14) Tercih Edilen Bolum"
                 android:textSize="12sp"
-                android:visibility="invisible"/>
+                />
             <CheckBox
                 android:id="@+id/checkbox_tercihlistem_14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="15) Tercih Edilen Bolum"
                 android:textSize="12sp"
-                android:visibility="invisible"/>
+                />
             <CheckBox
                 android:id="@+id/checkbox_tercihlistem_15"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="16) Tercih Edilen Bolum"
                 android:textSize="12sp"
-                android:visibility="invisible"/>
+                />
             <CheckBox
                 android:id="@+id/checkbox_tercihlistem_16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="17) Tercih Edilen Bolum"
                 android:textSize="12sp"
-                android:visibility="invisible"/>
+                />
             <CheckBox
                 android:id="@+id/checkbox_tercihlistem_17"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="18) Tercih Edilen Bolum"
                 android:textSize="12sp"
-                android:visibility="invisible"/>
+                />
             <CheckBox
                 android:id="@+id/checkbox_tercihlistem_18"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="19) Tercih Edilen Bolum"
                 android:textSize="12sp"
-                android:visibility="invisible"/>
+                />
 
             <CheckBox
                 android:id="@+id/checkbox_tercihlistem_19"
@@ -180,7 +186,7 @@
                 android:layout_height="wrap_content"
                 android:text="20) Tercih Edilen Bolum"
                 android:textSize="12sp"
-                android:visibility="invisible"/>
+                />
 
             <CheckBox
                 android:id="@+id/checkbox_tercihlistem_20"
@@ -188,7 +194,7 @@
                 android:layout_height="wrap_content"
                 android:text="21) Tercih Edilen Bolum"
                 android:textSize="12sp"
-                android:visibility="invisible"/>
+                />
 
             <CheckBox
                 android:id="@+id/checkbox_tercihlistem_21"
@@ -196,7 +202,7 @@
                 android:layout_height="wrap_content"
                 android:text="22) Tercih Edilen Bolum"
                 android:textSize="12sp"
-                android:visibility="invisible"/>
+                />
 
             <CheckBox
                 android:id="@+id/checkbox_tercihlistem_22"
@@ -204,7 +210,7 @@
                 android:layout_height="wrap_content"
                 android:text="23) Tercih Edilen Bolum"
                 android:textSize="12sp"
-                android:visibility="invisible"/>
+                />
 
             <CheckBox
                 android:id="@+id/checkbox_tercihlistem_23"
@@ -212,14 +218,14 @@
                 android:layout_height="wrap_content"
                 android:text="24) Tercih Edilen Bolum"
                 android:textSize="12sp"
-                android:visibility="invisible"/>
+                />
             <CheckBox
                 android:id="@+id/checkbox_tercihlistem_24"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="25) Tercih Edilen Bolum"
                 android:textSize="12sp"
-                android:visibility="invisible"/>
+                />
         </LinearLayout>
     </ScrollView>
 

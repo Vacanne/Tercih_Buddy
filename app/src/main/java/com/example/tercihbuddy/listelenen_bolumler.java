@@ -134,216 +134,168 @@ public class listelenen_bolumler extends AppCompatActivity {
 
     String fin = "";
     String sep = ",";
-
-    /*
-    String ab = listbol_checkBox0.toString();
-            System.out.println(ab);
-            ValueEventListener postListener = new ValueEventListener() {
-                @Override
-                public void onDataChange(DataSnapshot dataSnapshot) {
-                    // Get Post object and use the values to update the UI
-                    User users = dataSnapshot.getValue(User.class);
-                    users.tercih_listesi_list.add(ab);
-                    System.out.println(users.tercih_listesi_list.get(0));
-                    // ..
-                }
-
-                @Override
-                public void onCancelled(@NonNull DatabaseError error) {
-
-                }
-            };
-     */
-
-
     public void tercihlistemeekle_func() {
-        activeUserID = myAuth.getCurrentUser().getUid();
 
-        userPath = FirebaseDatabase.getInstance().getReference().child("Users_tb");
-        String groupKey = userPath.push().getKey();
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user != null) {
+            // Kullanıcı giriş yaptı
+            DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Users_tb").child(user.getUid());
+            // Kullanıcının veritabanı referansı
+            //String newTercihList = "your-new-tercih-list";
 
-        DatabaseReference messagesKeyPath = userPath.child(groupKey);
+            if (listbol_checkBox0.isChecked()) {
+                fin = fin + (String) listbol_checkBox0.getText();
+                fin = sep + fin + sep;
+                databaseReference.child("Tercih_list").setValue(fin);
+                Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
+            }
+            if (listbol_checkBox1.isChecked()) {
+                fin = fin + (String) listbol_checkBox1.getText();
+                fin = sep + fin + sep;
+                databaseReference.child("Tercih_list").setValue(fin);
+                Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
+            }
+            if (listbol_checkBox2.isChecked()) {
+                fin = fin + (String) listbol_checkBox2.getText();
+                fin = sep + fin + sep;
+                databaseReference.child("Tercih_list").setValue(fin);
+                Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
+            }
+            if (listbol_checkBox3.isChecked()) {
+                fin = fin + (String) listbol_checkBox3.getText();
+                fin = sep + fin + sep;
+                databaseReference.child("Tercih_list").setValue(fin);
+                Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
+            }
+            if (listbol_checkBox4.isChecked()) {
+                fin = fin + (String) listbol_checkBox4.getText();
+                fin = sep + fin + sep;
+                databaseReference.child("Tercih_list").setValue(fin);
+                Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
+            }
+            if (listbol_checkBox5.isChecked()) {
+                fin = fin + (String) listbol_checkBox5.getText();
+                fin = sep + fin + sep;
+                databaseReference.child("Tercih_list").setValue(fin);
+                Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
+            }
+            if (listbol_checkBox6.isChecked()) {
+                fin = fin + (String) listbol_checkBox6.getText();
+                fin = sep + fin + sep;
+                databaseReference.child("Tercih_list").setValue(fin);
+                Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
+            }
+            if (listbol_checkBox7.isChecked()) {
+                fin = fin + (String) listbol_checkBox7.getText();
+                fin = sep + fin + sep;
+                databaseReference.child("Tercih_list").setValue(fin);
+                Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
+            }
+            if (listbol_checkBox8.isChecked()) {
+                fin = fin + (String) listbol_checkBox8.getText();
+                fin = sep + fin + sep;
+                databaseReference.child("Tercih_list").setValue(fin);
+                Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
+            }
+            if (listbol_checkBox9.isChecked()) {
+                fin = fin + (String) listbol_checkBox9.getText();
+                fin = sep + fin + sep;
+                databaseReference.child("Tercih_list").setValue(fin);
+                Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
+            }
+            if (listbol_checkBox10.isChecked()) {
+                fin = fin + (String) listbol_checkBox10.getText();
+                fin = sep + fin + sep;
+                databaseReference.child("Tercih_list").setValue(fin);
+                Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
+            }
+            if (listbol_checkBox11.isChecked()) {
+                fin = fin + (String) listbol_checkBox11.getText();
+                fin = sep + fin + sep;
+                databaseReference.child("Tercih_list").setValue(fin);
+                Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
+            }
+            if (listbol_checkBox12.isChecked()) {
+                fin = fin + (String) listbol_checkBox12.getText();
+                fin = sep + fin + sep;
+                databaseReference.child("Tercih_list").setValue(fin);
+                Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
+            }
+            if (listbol_checkBox13.isChecked()) {
+                fin = fin + (String) listbol_checkBox13.getText();
+                fin = sep + fin + sep;
+                databaseReference.child("Tercih_list").setValue(fin);
+                Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
+            }
+            if (listbol_checkBox14.isChecked()) {
+                fin = fin + (String) listbol_checkBox14.getText();
+                fin = sep + fin + sep;
+                databaseReference.child("Tercih_list").setValue(fin);
+                Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
+            }
+            if (listbol_checkBox15.isChecked()) {
+                fin = fin + (String) listbol_checkBox15.getText();
+                fin = sep + fin + sep;
+                databaseReference.child("Tercih_list").setValue(fin);
+                Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
+            }
+            if (listbol_checkBox16.isChecked()) {
+                fin = fin + (String) listbol_checkBox16.getText();
+                fin = sep + fin + sep;
+                databaseReference.child("Tercih_list").setValue(fin);
+                Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
+            }
+            if (listbol_checkBox17.isChecked()) {
+                fin = fin + (String) listbol_checkBox17.getText();
+                fin = sep + fin + sep;
+                databaseReference.child("Tercih_list").setValue(fin);
+                Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
+            }
+            if (listbol_checkBox18.isChecked()) {
+                fin = fin + (String) listbol_checkBox18.getText();
+                fin = sep + fin + sep;
+                databaseReference.child("Tercih_list").setValue(fin);
+                Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
+            }
+            if (listbol_checkBox19.isChecked()) {
+                fin = fin + (String) listbol_checkBox19.getText();
+                fin = sep + fin + sep;
+                databaseReference.child("Tercih_list").setValue(fin);
+                Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
+            }
+            if (listbol_checkBox20.isChecked()) {
+                fin = fin + (String) listbol_checkBox20.getText();
+                fin = sep + fin + sep;
+                databaseReference.child("Tercih_list").setValue(fin);
+                Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
+            }
+            if (listbol_checkBox21.isChecked()) {
+                fin = fin + (String) listbol_checkBox21.getText();
+                fin = sep + fin + sep;
+                databaseReference.child("Tercih_list").setValue(fin);
+                Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
+            }
+            if (listbol_checkBox22.isChecked()) {
+                fin = fin + (String) listbol_checkBox22.getText();
+                fin = sep + fin + sep;
+                databaseReference.child("Tercih_list").setValue(fin);
+                Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
+            }
+            if (listbol_checkBox23.isChecked()) {
+                fin = fin + (String) listbol_checkBox23.getText();
+                fin = sep + fin + sep;
+                databaseReference.child("Tercih_list").setValue(fin);
+                Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
+            }
+            if (listbol_checkBox24.isChecked()) {
+                fin = fin + (String) listbol_checkBox24.getText();
+                fin = sep + fin + sep;
+                databaseReference.child("Tercih_list").setValue(fin);
+                Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
+            }
 
-        HashMap<String, Object> profileMap = new HashMap<>();
-        userPath.updateChildren(profileMap);
-        if (listbol_checkBox0.isChecked()) {
-            fin = fin + (String) listbol_checkBox0.getText();
-            fin = sep + fin + sep;
-            profileMap.put("uname_tb",activeUsername);
-            profileMap.put("Tercih_list", fin);
-            messagesKeyPath.updateChildren(profileMap);
-            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
-
-        }
-        if (listbol_checkBox1.isChecked()) {
-            fin = fin + (String) listbol_checkBox1.getText();
-            fin = sep + fin + sep;
-            profileMap.put("Tercih_list", fin);
-            messagesKeyPath.updateChildren(profileMap);
-            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
-        }
-        if (listbol_checkBox2.isChecked()) {
-            fin = fin + (String) listbol_checkBox2.getText();
-            fin = sep + fin + sep;
-            profileMap.put("Tercih_list", fin);
-            messagesKeyPath.updateChildren(profileMap);
-            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
-        }
-        if (listbol_checkBox3.isChecked()) {
-            fin = fin + (String) listbol_checkBox3.getText();
-            fin = sep + fin + sep;
-            profileMap.put("Tercih_list", fin);
-            messagesKeyPath.updateChildren(profileMap);
-            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
-        }
-        if (listbol_checkBox4.isChecked()) {
-            fin = fin + (String) listbol_checkBox4.getText();
-            fin = sep + fin + sep;
-            profileMap.put("Tercih_list", fin);
-            messagesKeyPath.updateChildren(profileMap);
-            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
-        }
-        if (listbol_checkBox5.isChecked()) {
-            fin = fin + (String) listbol_checkBox5.getText();
-            fin = sep + fin + sep;
-            profileMap.put("Tercih_list", fin);
-            messagesKeyPath.updateChildren(profileMap);
-            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
-        }
-        if (listbol_checkBox6.isChecked()) {
-            fin = fin + (String) listbol_checkBox6.getText();
-            fin = sep + fin + sep;
-            profileMap.put("Tercih_list", fin);
-            messagesKeyPath.updateChildren(profileMap);
-            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
-        }
-        if (listbol_checkBox7.isChecked()) {
-            fin = fin + (String) listbol_checkBox7.getText();
-            fin = sep + fin + sep;
-            profileMap.put("Tercih_list", fin);
-            messagesKeyPath.updateChildren(profileMap);
-            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
-        }
-        if (listbol_checkBox8.isChecked()) {
-            fin = fin + (String) listbol_checkBox8.getText();
-            fin = sep + fin + sep;
-            profileMap.put("Tercih_list", fin);
-            messagesKeyPath.updateChildren(profileMap);
-            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
-        }
-        if (listbol_checkBox9.isChecked()) {
-            fin = fin + (String) listbol_checkBox9.getText();
-            fin = sep + fin + sep;
-            profileMap.put("Tercih_list", fin);
-            messagesKeyPath.updateChildren(profileMap);
-            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
-        }
-        if (listbol_checkBox10.isChecked()) {
-            fin = fin + (String) listbol_checkBox10.getText();
-            fin = sep + fin + sep;
-            profileMap.put("Tercih_list", fin);
-            messagesKeyPath.updateChildren(profileMap);
-            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
-        }
-        if (listbol_checkBox11.isChecked()) {
-            fin = fin + (String) listbol_checkBox11.getText();
-            fin = sep + fin + sep;
-            profileMap.put("Tercih_list", fin);
-            messagesKeyPath.updateChildren(profileMap);
-            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
-        }
-        if (listbol_checkBox12.isChecked()) {
-            fin = fin + (String) listbol_checkBox12.getText();
-            fin = sep + fin + sep;
-            profileMap.put("Tercih_list", fin);
-            messagesKeyPath.updateChildren(profileMap);
-            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
-        }
-        if (listbol_checkBox13.isChecked()) {
-            fin = fin + (String) listbol_checkBox13.getText();
-            fin = sep + fin + sep;
-            profileMap.put("Tercih_list", fin);
-            messagesKeyPath.updateChildren(profileMap);
-            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
-        }
-        if (listbol_checkBox14.isChecked()) {
-            fin = fin + (String) listbol_checkBox14.getText();
-            fin = sep + fin + sep;
-            profileMap.put("Tercih_list", fin);
-            messagesKeyPath.updateChildren(profileMap);
-            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
-        }
-        if (listbol_checkBox15.isChecked()) {
-            fin = fin + (String) listbol_checkBox15.getText();
-            fin = sep + fin + sep;
-            profileMap.put("Tercih_list", fin);
-            messagesKeyPath.updateChildren(profileMap);
-            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
-        }
-        if (listbol_checkBox16.isChecked()) {
-            fin = fin + (String) listbol_checkBox16.getText();
-            fin = sep + fin + sep;
-            profileMap.put("Tercih_list", fin);
-            messagesKeyPath.updateChildren(profileMap);
-            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
-        }
-        if (listbol_checkBox17.isChecked()) {
-            fin = fin + (String) listbol_checkBox17.getText();
-            fin = sep + fin + sep;
-            profileMap.put("Tercih_list", fin);
-            messagesKeyPath.updateChildren(profileMap);
-            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
-        }
-        if (listbol_checkBox18.isChecked()) {
-            fin = fin + (String) listbol_checkBox18.getText();
-            fin = sep + fin + sep;
-            profileMap.put("Tercih_list", fin);
-            messagesKeyPath.updateChildren(profileMap);
-            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
-        }
-        if (listbol_checkBox19.isChecked()) {
-            fin = fin + (String) listbol_checkBox19.getText();
-            fin = sep + fin + sep;
-            profileMap.put("Tercih_list", fin);
-            messagesKeyPath.updateChildren(profileMap);
-            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
-        }
-        if (listbol_checkBox20.isChecked()) {
-            fin = fin + (String) listbol_checkBox20.getText();
-            fin = sep + fin + sep;
-            profileMap.put("Tercih_list", fin);
-            messagesKeyPath.updateChildren(profileMap);
-            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
-        }
-        if (listbol_checkBox21.isChecked()) {
-            fin = fin + (String) listbol_checkBox21.getText();
-            fin = sep + fin + sep;
-            profileMap.put("Tercih_list", fin);
-            messagesKeyPath.updateChildren(profileMap);
-            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
-        }
-        if (listbol_checkBox22.isChecked()) {
-            fin = fin + (String) listbol_checkBox22.getText();
-            fin = sep + fin + sep;
-            profileMap.put("Tercih_list", fin);
-            messagesKeyPath.updateChildren(profileMap);
-            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
-        }
-        if (listbol_checkBox23.isChecked()) {
-            fin = fin + (String) listbol_checkBox23.getText();
-            fin = sep + fin + sep;
-            profileMap.put("Tercih_list", fin);
-            messagesKeyPath.updateChildren(profileMap);
-            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
-        }
-        if (listbol_checkBox24.isChecked()) {
-            fin = fin + (String) listbol_checkBox24.getText();
-            fin = sep + fin + sep;
-            profileMap.put("Tercih_list", fin);
-            messagesKeyPath.updateChildren(profileMap);
-            Toast.makeText(listelenen_bolumler.this, "Bolumler eklendi.", Toast.LENGTH_LONG).show();
         } else {
-            Toast.makeText(listelenen_bolumler.this, "Bolum secilmedigi icin eklenme islemi gerceklestirelemedi.", Toast.LENGTH_LONG).show();
+            // Kullanıcı giriş yapmadı
         }
     }
 
