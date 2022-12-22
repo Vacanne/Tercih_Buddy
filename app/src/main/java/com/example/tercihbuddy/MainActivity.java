@@ -61,6 +61,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        // Create a new thread
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                int new_thread = 0;
+                new_thread++;
+                System.out.println(new_thread); // Do something in the background thread
+            }
+        });
+
+        // Start the thread
+        thread.start();
+
     }
 
     public void opensehirveuniversitesecimi() {

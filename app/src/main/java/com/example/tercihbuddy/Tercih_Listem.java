@@ -18,6 +18,9 @@ import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import java.lang.String;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
 import java.util.Objects;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -46,6 +49,7 @@ public class Tercih_Listem extends AppCompatActivity {
 
         anamenu_button = (Button) findViewById(R.id.ana_menu);
         tercihlistemdenkaldir_button    = (Button) findViewById(R.id.tercih_listemden_kaldır);
+        /*
         checkBox0  = (CheckBox) findViewById(R.id.checkbox_tercihlistem_0);
         checkBox1  = (CheckBox) findViewById(R.id.checkbox_tercihlistem_1);
         checkBox2  = (CheckBox) findViewById(R.id.checkbox_tercihlistem_2);
@@ -71,7 +75,7 @@ public class Tercih_Listem extends AppCompatActivity {
         checkBox22 = (CheckBox) findViewById(R.id.checkbox_tercihlistem_22);
         checkBox23 = (CheckBox) findViewById(R.id.checkbox_tercihlistem_23);
         checkBox24 = (CheckBox) findViewById(R.id.checkbox_tercihlistem_24);
-
+*/
         anamenu_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -91,7 +95,19 @@ public class Tercih_Listem extends AppCompatActivity {
                 // veriler değiştiğinde bu metod çağrılır
                 String tercihList = dataSnapshot.child("Tercih_list").getValue(String.class);
                 // tercihList değişkenine eriştim
-                String[] tercihListArray = tercihList.split(",");
+
+                //String str = Objects.requireNonNull(someObject);
+                //String[] parts = str.split("\\.");
+
+
+                String[] tercihListArray = new String[0];
+                if (tercihList != null) {
+                    tercihListArray = tercihList.split(",");
+                }else{
+                    tercihList = "";
+                }
+
+                System.out.println(tercihListArray.length);
 
                 for (int i = 0; i< tercihListArray.length; i++){
                     if (!Objects.equals(tercihListArray[i], "")){
@@ -145,7 +161,7 @@ public class Tercih_Listem extends AppCompatActivity {
                         CheckBox checkBox23 = (CheckBox) findViewById(R.id.checkbox_tercihlistem_23);
                         checkBox23.setText(tercihListArray[tercihListArray.length-24]);
                         CheckBox checkBox24 = (CheckBox) findViewById(R.id.checkbox_tercihlistem_24);
-                        checkBox24.setText(tercihListArray[tercihListArray.length-i]);
+                        checkBox24.setText(tercihListArray[tercihListArray.length-25]);
                         System.out.println(i+" : "+tercihListArray[i]);
                         System.out.println("length " + tercihListArray.length);
                     }
