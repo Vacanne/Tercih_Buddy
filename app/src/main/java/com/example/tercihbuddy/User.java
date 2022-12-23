@@ -20,5 +20,35 @@ public class User {
         this.tercih_listesi_list = tercih_listesi_list;
     }
 
+    public String getUsername() {
+        return username;
+    }
 
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPid() {
+        return pid;
+    }
+
+    public void setPid(String pid) {
+        this.pid = pid;
+    }
+
+    public List<String> getTercih_listesi_list() {
+        return tercih_listesi_list;
+    }
+
+    public void setTercih_listesi_list(List<String> tercih_listesi_list) {
+        this.tercih_listesi_list = tercih_listesi_list;
+    }
 }

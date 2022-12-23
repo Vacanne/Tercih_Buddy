@@ -66,9 +66,15 @@ public class MainActivity extends AppCompatActivity {
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
-                int new_thread = 0;
-                new_thread++;
-                System.out.println(new_thread); // Do something in the background thread
+                int i=0;
+                int j=0;
+                for(int x = 0 ; x<= 1000; x++){
+                    i++;
+                    j++;
+                    System.out.println("i: " +i); // Do something in the background thread
+                    System.out.println("j: " +j); // Do something in the background thread
+                }
+
             }
         });
 
