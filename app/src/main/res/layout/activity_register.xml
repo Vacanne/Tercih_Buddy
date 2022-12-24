@@ -20,59 +20,65 @@
             android:textSize="34sp"
 
             />
+
         <EditText
             android:id="@+id/edt_register_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Username"
+            android:hint="@string/username"
             android:inputType="text"
             android:textSize="20sp"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="100dp"/>
 
         <EditText
             android:id="@+id/edt_register_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email"
+            android:hint="@string/email"
             android:inputType="textEmailAddress"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"/>
         <EditText
             android:id="@+id/edt_register_phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Phone Number"
+            android:hint="@string/phone_number"
             android:inputType="phone"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"/>
         <EditText
             android:id="@+id/edt_register_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password"
+            android:hint="@string/password"
             android:inputType="textPassword"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"/>
 
         <EditText
             android:id="@+id/edt_register_re_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Confirm Your Password"
+            android:hint="@string/confirm_your_password"
             android:inputType="textPassword"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"/>
 
         <Button
             android:id="@+id/btn_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Register"
-            android:textSize="20sp" />
+            android:text="@string/register"
+            android:textSize="20sp"
+            />
 
         <TextView
             android:id="@+id/txt_have_account"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="If You Have Account Click Here"
+            android:text="@string/if_you_have_account_click_here"
             android:textAlignment="textEnd"
             android:textSize="16sp"
             android:textStyle="bold" />

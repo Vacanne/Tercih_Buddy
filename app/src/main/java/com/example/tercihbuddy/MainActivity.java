@@ -12,6 +12,16 @@ import android.widget.Button;
 
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -66,14 +76,22 @@ public class MainActivity extends AppCompatActivity {
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
-                int i=0;
-                int j=0;
-                for(int x = 0 ; x<= 1000; x++){
-                    i++;
-                    j++;
-                    System.out.println("i: " +i); // Do something in the background thread
-                    System.out.println("j: " +j); // Do something in the background thread
+                try {
+                    URL url = new URL("https://mu.edu.tr/");
+                    HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+                    connection.setRequestMethod("GET");
+                    connection.setRequestProperty("User-Agent", "Mozilla/5.0");
+                    int responseCode = connection.getResponseCode();
+                    if (responseCode == 200) {
+                        System.out.println("Website working properly.");
+                    } else {
+                        System.out.println("Website is not working properly!!");
+                    }
+
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
+
 
             }
         });

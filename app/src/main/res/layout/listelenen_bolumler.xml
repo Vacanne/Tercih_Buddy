@@ -22,7 +22,7 @@
         android:id="@+id/text_listelenen_bolumler"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/listelenen_b_l_mler"
+        android:text="@string/listelenen_bolumler"
         android:textSize="20sp"
         app:layout_constraintTop_toBottomOf="@+id/tercih_buddy"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,7 +48,7 @@
                 android:id="@+id/checkbox_listelenenblomler_0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bilgisayar Mühendisliği"
+                android:text="@string/bilgisayar_muhendisligi"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/text_listelenen_bolumler" />
@@ -57,7 +57,7 @@
                 android:id="@+id/checkbox_listelenenblomler_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Elektrik-Elektronik Müh."
+                android:text="@string/elektrik_elektronik_muh"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_0" />
@@ -66,7 +66,7 @@
                 android:id="@+id/checkbox_listelenenblomler_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Endüstri Mühendisliği"
+                android:text="@string/endustri_muhendisligi"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_1" />
@@ -75,7 +75,7 @@
                 android:id="@+id/checkbox_listelenenblomler_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Havacılık ve Uzay Müh."
+                android:text="@string/havacilik_ve_uzay_muh"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_2" />
@@ -84,7 +84,7 @@
                 android:id="@+id/checkbox_listelenenblomler_4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Makine Müh."
+                android:text="@string/makine_muh"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_3" />
@@ -93,7 +93,7 @@
                 android:id="@+id/checkbox_listelenenblomler_5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Kimya Mühendisliği"
+                android:text="@string/kimya_muhendisligi"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_4" />
@@ -102,7 +102,7 @@
                 android:id="@+id/checkbox_listelenenblomler_6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Fizik"
+                android:text="@string/fizik"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_5" />
@@ -111,7 +111,7 @@
                 android:id="@+id/checkbox_listelenenblomler_7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Matematik"
+                android:text="@string/matematik"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_6" />
@@ -120,7 +120,7 @@
                 android:id="@+id/checkbox_listelenenblomler_8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="İstatistik"
+                android:text="@string/istatistik"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_7" />
@@ -129,7 +129,7 @@
                 android:id="@+id/checkbox_listelenenblomler_9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mimarlık"
+                android:text="@string/mimarlik"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_8" />
@@ -138,7 +138,7 @@
                 android:id="@+id/checkbox_listelenenblomler_10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Biyoloji"
+                android:text="@string/biyoloji"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_9" />
@@ -147,7 +147,7 @@
                 android:id="@+id/checkbox_listelenenblomler_11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Kimya"
+                android:text="@string/kimya"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_10" />
@@ -156,7 +156,7 @@
                 android:id="@+id/checkbox_listelenenblomler_12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Çevre Mühendisliği"
+                android:text="@string/cevre_muhendisligi"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_11" />
@@ -164,7 +164,7 @@
                 android:id="@+id/checkbox_listelenenblomler_13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Elektrik-Elektronik Müh."
+                android:text="@string/elektrik_elektronik_muh"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_0" />
@@ -173,7 +173,7 @@
                 android:id="@+id/checkbox_listelenenblomler_14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Endüstri Mühendisliği"
+                android:text="@string/endustri_muhendisligi"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_1" />
@@ -182,7 +182,7 @@
                 android:id="@+id/checkbox_listelenenblomler_15"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Havacılık ve Uzay Müh."
+                android:text="@string/havacilik_ve_uzay_muh"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_2" />
@@ -191,7 +191,7 @@
                 android:id="@+id/checkbox_listelenenblomler_16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Makine Müh."
+                android:text="@string/makine_muh"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_3" />
@@ -200,7 +200,7 @@
                 android:id="@+id/checkbox_listelenenblomler_17"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Kimya Mühendisliği"
+                android:text="@string/kimya_muhendisligi"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_4" />
@@ -209,7 +209,7 @@
                 android:id="@+id/checkbox_listelenenblomler_18"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Fizik"
+                android:text="@string/fizik"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_5" />
@@ -218,7 +218,7 @@
                 android:id="@+id/checkbox_listelenenblomler_19"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Matematik"
+                android:text="@string/matematik"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_6" />
@@ -227,7 +227,7 @@
                 android:id="@+id/checkbox_listelenenblomler_20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="İstatistik"
+                android:text="@string/istatistik"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_7" />
@@ -236,7 +236,7 @@
                 android:id="@+id/checkbox_listelenenblomler_21"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mimarlık"
+                android:text="@string/mimarlik"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_8" />
@@ -245,7 +245,7 @@
                 android:id="@+id/checkbox_listelenenblomler_22"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Biyoloji"
+                android:text="@string/biyoloji"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_9" />
@@ -254,7 +254,7 @@
                 android:id="@+id/checkbox_listelenenblomler_23"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Kimya"
+                android:text="@string/kimya"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_10" />
@@ -263,7 +263,7 @@
                 android:id="@+id/checkbox_listelenenblomler_24"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Çevre Mühendisliği"
+                android:text="@string/cevre_muhendisligi"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/checkbox_listelenenblomler_11" />
@@ -285,7 +285,7 @@
         android:layout_width="350px"
         android:layout_height="wrap_content"
 
-        android:text="@string/ana_men"
+        android:text="@string/ana_menu"
         android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@+id/listbol_tercih_listeme_ekle_button"
         app:layout_constraintEnd_toStartOf="@+id/listbol_tercih_listem_button"

@@ -21,7 +21,7 @@
         android:id="@+id/text_sehirveuniversitesecimi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/sehir"
+        android:text="@string/sehir_ve_universite_secimi"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tercih_buddy" />
@@ -49,7 +49,7 @@
                 android:id="@+id/checkbox_sehirveuniversitesec_0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Ankara"
+                android:text="@string/ankara"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/text_sehirveuniversitesecimi"
@@ -60,18 +60,18 @@
                 android:id="@+id/checkbox_sehirveuniversitesec_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Istanbul"
+                android:text="@string/istanbul"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/checkbox_sehirveuniversitesec_0" />
 
-            />
+
 
             <CheckBox
                 android:id="@+id/checkbox_sehirveuniversitesec_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mugla"
+                android:text="@string/mugla"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/checkbox_sehirveuniversitesec_1" />
@@ -80,7 +80,7 @@
                 android:id="@+id/checkbox_sehirveuniversitesec_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Izmir"
+                android:text="@string/izmir"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/checkbox_sehirveuniversitesec_2" />
@@ -89,7 +89,7 @@
                 android:id="@+id/checkbox_sehirveuniversitesec_4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Eskisehir"
+                android:text="@string/eskisehir"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/checkbox_sehirveuniversitesec_3" />
@@ -98,7 +98,7 @@
                 android:id="@+id/checkbox_sehirveuniversitesec_5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Duzce"
+                android:text="@string/duzce"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/checkbox_sehirveuniversitesec_4" />
@@ -107,7 +107,7 @@
                 android:id="@+id/checkbox_sehirveuniversitesec_6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Erzurum"
+                android:text="@string/erzurum"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/checkbox_sehirveuniversitesec_5" />
@@ -116,7 +116,7 @@
                 android:id="@+id/checkbox_sehirveuniversitesec_7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Konya"
+                android:text="@string/konya"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/checkbox_sehirveuniversitesec_6" />
@@ -125,7 +125,7 @@
                 android:id="@+id/checkbox_sehirveuniversitesec_8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Karaman"
+                android:text="@string/karaman"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/checkbox_sehirveuniversitesec_7" />
@@ -134,7 +134,7 @@
                 android:id="@+id/checkbox_sehirveuniversitesec_9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Balikesir"
+                android:text="@string/balikesir"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/checkbox_sehirveuniversitesec_8" />
@@ -143,7 +143,7 @@
                 android:id="@+id/checkbox_sehirveuniversitesec_10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sakarya"
+                android:text="@string/sakarya"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/checkbox_sehirveuniversitesec_9" />
@@ -152,7 +152,7 @@
                 android:id="@+id/checkbox_sehirveuniversitesec_11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Gaziantep"
+                android:text="@string/gaziantep"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/checkbox_sehirveuniversitesec_10" />
@@ -160,7 +160,7 @@
                 android:id="@+id/checkbox_sehirveuniversitesec_12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Kirikkale"
+                android:text="@string/kirikkale"
                 android:textSize="12sp"
                 app:layout_constraintStart_toEndOf="@id/checkbox_sehirveuniversitesec_9"
                 app:layout_constraintTop_toTopOf="@id/checkbox_sehirveuniversitesec_9" />
@@ -169,7 +169,7 @@
                 android:id="@+id/checkbox_sehirveuniversitesec_13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Canakkale"
+                android:text="@string/canakkale"
                 android:textSize="12sp"
                 app:layout_constraintStart_toEndOf="@id/checkbox_sehirveuniversitesec_10"
                 app:layout_constraintTop_toTopOf="@id/checkbox_sehirveuniversitesec_10" />
@@ -178,7 +178,7 @@
                 android:id="@+id/checkbox_sehirveuniversitesec_14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Aydin"
+                android:text="@string/aydin"
                 android:textSize="12sp"
                 app:layout_constraintStart_toEndOf="@id/checkbox_sehirveuniversitesec_11"
                 app:layout_constraintTop_toTopOf="@id/checkbox_sehirveuniversitesec_11" />
@@ -206,7 +206,7 @@
                 android:id="@+id/checkbox_sehirveuniversitesec_00"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mugla Sitki Kocman Universitesi"
+                android:text="@string/mugla_sitki_kocman_universitesi"
                 android:textSize="12sp"
                 app:layout_constraintStart_toEndOf="@id/checkbox_sehirveuniversitesec_0"
                 app:layout_constraintTop_toTopOf="@id/checkbox_sehirveuniversitesec_0" />
@@ -215,7 +215,7 @@
                 android:id="@+id/checkbox_sehirveuniversitesec_01"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Odtu"
+                android:text="@string/odtu"
                 android:textSize="12sp"
                 app:layout_constraintStart_toEndOf="@id/checkbox_sehirveuniversitesec_1"
                 app:layout_constraintTop_toTopOf="@id/checkbox_sehirveuniversitesec_1" />
@@ -224,7 +224,7 @@
                 android:id="@+id/checkbox_sehirveuniversitesec_02"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1) Tercih Edilen Bölüm"
+                android:text="@string/_1_tercih_edilen_bolum"
                 android:textSize="12sp"
                 app:layout_constraintStart_toEndOf="@id/checkbox_sehirveuniversitesec_2"
                 app:layout_constraintTop_toTopOf="@id/checkbox_sehirveuniversitesec_2" />
@@ -233,7 +233,7 @@
                 android:id="@+id/checkbox_sehirveuniversitesec_03"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1) Tercih Edilen Bölüm"
+                android:text="@string/_1_tercih_edilen_bolum"
                 android:textSize="12sp"
                 app:layout_constraintStart_toEndOf="@id/checkbox_sehirveuniversitesec_3"
                 app:layout_constraintTop_toTopOf="@id/checkbox_sehirveuniversitesec_3" />
@@ -242,7 +242,7 @@
                 android:id="@+id/checkbox_sehirveuniversitesec_04"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1) Tercih Edilen Bölüm"
+                android:text="@string/_1_tercih_edilen_bolum"
                 android:textSize="12sp"
                 app:layout_constraintStart_toEndOf="@id/checkbox_sehirveuniversitesec_4"
                 app:layout_constraintTop_toTopOf="@id/checkbox_sehirveuniversitesec_4" />
@@ -251,7 +251,7 @@
                 android:id="@+id/checkbox_sehirveuniversitesec_05"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1) Tercih Edilen Bölüm"
+                android:text="@string/_1_tercih_edilen_bolum"
                 android:textSize="12sp"
                 app:layout_constraintStart_toEndOf="@id/checkbox_sehirveuniversitesec_5"
                 app:layout_constraintTop_toTopOf="@id/checkbox_sehirveuniversitesec_5" />
@@ -260,7 +260,7 @@
                 android:id="@+id/checkbox_sehirveuniversitesec_06"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1) Tercih Edilen Bölüm"
+                android:text="@string/_1_tercih_edilen_bolum"
                 android:textSize="12sp"
                 app:layout_constraintStart_toEndOf="@id/checkbox_sehirveuniversitesec_6"
                 app:layout_constraintTop_toTopOf="@id/checkbox_sehirveuniversitesec_6" />
@@ -269,7 +269,7 @@
                 android:id="@+id/checkbox_sehirveuniversitesec_07"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1) Tercih Edilen Bölüm"
+                android:text="@string/_1_tercih_edilen_bolum"
                 android:textSize="12sp"
                 app:layout_constraintStart_toEndOf="@id/checkbox_sehirveuniversitesec_7"
                 app:layout_constraintTop_toTopOf="@id/checkbox_sehirveuniversitesec_7" />
@@ -278,7 +278,7 @@
                 android:id="@+id/checkbox_sehirveuniversitesec_08"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1) Tercih Edilen Bölüm"
+                android:text="@string/_1_tercih_edilen_bolum"
                 android:textSize="12sp"
                 app:layout_constraintStart_toEndOf="@id/checkbox_sehirveuniversitesec_8"
                 app:layout_constraintTop_toTopOf="@id/checkbox_sehirveuniversitesec_8" />
@@ -287,7 +287,7 @@
                 android:id="@+id/checkbox_sehirveuniversitesec_09"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1) Tercih Edilen Bölüm"
+                android:text="@string/_1_tercih_edilen_bolum"
                 android:textSize="12sp"
                 app:layout_constraintStart_toEndOf="@id/checkbox_sehirveuniversitesec_9"
                 app:layout_constraintTop_toTopOf="@id/checkbox_sehirveuniversitesec_9" />
@@ -296,7 +296,7 @@
                 android:id="@+id/checkbox_sehirveuniversitesec_010"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1) Tercih Edilen Bölüm"
+                android:text="@string/_1_tercih_edilen_bolum"
                 android:textSize="12sp"
                 app:layout_constraintStart_toEndOf="@id/checkbox_sehirveuniversitesec_10"
                 app:layout_constraintTop_toTopOf="@id/checkbox_sehirveuniversitesec_10" />
@@ -305,7 +305,7 @@
                 android:id="@+id/checkbox_sehirveuniversitesec_011"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1) Tercih Edilen Bölüm"
+                android:text="@string/_1_tercih_edilen_bolum"
                 android:textSize="12sp"
                 app:layout_constraintStart_toEndOf="@id/checkbox_sehirveuniversitesec_11"
                 app:layout_constraintTop_toTopOf="@id/checkbox_sehirveuniversitesec_11" />
@@ -313,7 +313,7 @@
                 android:id="@+id/checkbox_sehirveuniversitesec_012"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1) Tercih Edilen Bölüm"
+                android:text="@string/_1_tercih_edilen_bolum"
                 android:textSize="12sp"
                 app:layout_constraintStart_toEndOf="@id/checkbox_sehirveuniversitesec_9"
                 app:layout_constraintTop_toTopOf="@id/checkbox_sehirveuniversitesec_9" />
@@ -322,7 +322,7 @@
                 android:id="@+id/checkbox_sehirveuniversitesec_013"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1) Tercih Edilen Bölüm"
+                android:text="@string/_1_tercih_edilen_bolum"
                 android:textSize="12sp"
                 app:layout_constraintStart_toEndOf="@id/checkbox_sehirveuniversitesec_10"
                 app:layout_constraintTop_toTopOf="@id/checkbox_sehirveuniversitesec_10" />
@@ -331,29 +331,30 @@
                 android:id="@+id/checkbox_sehirveuniversitesec_014"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1) Tercih Edilen Bölüm"
+                android:text="@string/_1_tercih_edilen_bolum"
                 android:textSize="12sp"
                 app:layout_constraintStart_toEndOf="@id/checkbox_sehirveuniversitesec_11"
                 app:layout_constraintTop_toTopOf="@id/checkbox_sehirveuniversitesec_11" />
         </LinearLayout>
     </ScrollView>
-    />
+
     <Button
         android:id="@+id/seherveuni_ana_menu_button"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100px"
-        android:text="@string/ana_men"
+        android:text="@string/ana_menu"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bolumlerigoster_sehiruni_button"
         />
     <Button
         android:id="@+id/bolumlerigoster_sehiruni_button"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:text="@string/b_l_mleri_g_ster"
+        android:text="@string/bolumleri_goster"
         android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/seherveuni_ana_menu_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
 

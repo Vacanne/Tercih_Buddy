@@ -162,8 +162,6 @@ public class Tercih_Listem extends AppCompatActivity {
                         checkBox23.setText(tercihListArray[tercihListArray.length-24]);
                         CheckBox checkBox24 = (CheckBox) findViewById(R.id.checkbox_tercihlistem_24);
                         checkBox24.setText(tercihListArray[tercihListArray.length-25]);
-                        System.out.println(i+" : "+tercihListArray[i]);
-                        System.out.println("length " + tercihListArray.length);
                     }
 
                 }
@@ -174,10 +172,7 @@ public class Tercih_Listem extends AppCompatActivity {
                 // bir hata oluştu
             }
 
-
-
         });
-
 
 
     }
@@ -186,12 +181,6 @@ public class Tercih_Listem extends AppCompatActivity {
         startActivity(intent);
 
     }
-
-
-
-
-
-
 
 
 
