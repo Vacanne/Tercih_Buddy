@@ -19,8 +19,9 @@ public class arama_kriterleri extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.arama_kriterleri);
 
-        bolumlerigoster_aramakriterleri_button = (Button) findViewById(R.id.bolumlerigoster_aramakriterleri_button);
-        alanbolum_ana_menu_button = (Button) findViewById(R.id.alanbolum_ana_menu_button);
+        bolumlerigoster_aramakriterleri_button = findViewById(R.id.bolumlerigoster_aramakriterleri_button);
+        alanbolum_ana_menu_button              = findViewById(R.id.alanbolum_ana_menu_button);
+
         bolumlerigoster_aramakriterleri_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

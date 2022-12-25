@@ -18,8 +18,8 @@ public class sehirveuniversitesecimi extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sehirveuniversitesecimi);
-        seherveuni_ana_menu_button = (Button) findViewById(R.id.seherveuni_ana_menu_button);
-        bolumlerigoster_sehiruni_button = (Button) findViewById(R.id.bolumlerigoster_sehiruni_button);
+        seherveuni_ana_menu_button      = findViewById(R.id.seherveuni_ana_menu_button);
+        bolumlerigoster_sehiruni_button = findViewById(R.id.bolumlerigoster_sehiruni_button);
 
         seherveuni_ana_menu_button.setOnClickListener(new View.OnClickListener() {
             @Override

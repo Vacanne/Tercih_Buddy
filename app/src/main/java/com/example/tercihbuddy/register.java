@@ -102,10 +102,6 @@ public class register extends AppCompatActivity {
 
                         rootReference.child("Users_tb").child(activeUserID).setValue(profileMap);
 
-
-
-
-
                         Intent mainIntent = new Intent(register.this, LoginActivity.class);
                         mainIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                         startActivity(mainIntent);

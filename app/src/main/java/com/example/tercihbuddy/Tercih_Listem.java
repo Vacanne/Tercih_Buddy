@@ -17,6 +17,8 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
+
+import java.io.IOException;
 import java.lang.String;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -45,37 +47,35 @@ public class Tercih_Listem extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tercih_listem);
 
-
-
         anamenu_button = (Button) findViewById(R.id.ana_menu);
         tercihlistemdenkaldir_button    = (Button) findViewById(R.id.tercih_listemden_kaldır);
-        /*
-        checkBox0  = (CheckBox) findViewById(R.id.checkbox_tercihlistem_0);
-        checkBox1  = (CheckBox) findViewById(R.id.checkbox_tercihlistem_1);
-        checkBox2  = (CheckBox) findViewById(R.id.checkbox_tercihlistem_2);
-        checkBox3  = (CheckBox) findViewById(R.id.checkbox_tercihlistem_3);
-        checkBox4  = (CheckBox) findViewById(R.id.checkbox_tercihlistem_4);
-        checkBox5  = (CheckBox) findViewById(R.id.checkbox_tercihlistem_5);
-        checkBox6  = (CheckBox) findViewById(R.id.checkbox_tercihlistem_6);
-        checkBox7  = (CheckBox) findViewById(R.id.checkbox_tercihlistem_7);
-        checkBox8  = (CheckBox) findViewById(R.id.checkbox_tercihlistem_8);
-        checkBox9  = (CheckBox) findViewById(R.id.checkbox_tercihlistem_9);
-        checkBox10 = (CheckBox) findViewById(R.id.checkbox_tercihlistem_10);
-        checkBox11 = (CheckBox) findViewById(R.id.checkbox_tercihlistem_11);
-        checkBox12 = (CheckBox) findViewById(R.id.checkbox_tercihlistem_12);
-        checkBox13 = (CheckBox) findViewById(R.id.checkbox_tercihlistem_13);
-        checkBox14 = (CheckBox) findViewById(R.id.checkbox_tercihlistem_14);
-        checkBox15 = (CheckBox) findViewById(R.id.checkbox_tercihlistem_15);
-        checkBox16 = (CheckBox) findViewById(R.id.checkbox_tercihlistem_16);
-        checkBox17 = (CheckBox) findViewById(R.id.checkbox_tercihlistem_17);
-        checkBox18 = (CheckBox) findViewById(R.id.checkbox_tercihlistem_18);
-        checkBox19 = (CheckBox) findViewById(R.id.checkbox_tercihlistem_19);
-        checkBox20 = (CheckBox) findViewById(R.id.checkbox_tercihlistem_20);
-        checkBox21 = (CheckBox) findViewById(R.id.checkbox_tercihlistem_21);
-        checkBox22 = (CheckBox) findViewById(R.id.checkbox_tercihlistem_22);
-        checkBox23 = (CheckBox) findViewById(R.id.checkbox_tercihlistem_23);
-        checkBox24 = (CheckBox) findViewById(R.id.checkbox_tercihlistem_24);
-*/
+
+        checkBox0  = findViewById(R.id.checkbox_tercihlistem_0);
+        checkBox1  = findViewById(R.id.checkbox_tercihlistem_1);
+        checkBox2  = findViewById(R.id.checkbox_tercihlistem_2);
+        checkBox3  = findViewById(R.id.checkbox_tercihlistem_3);
+        checkBox4  = findViewById(R.id.checkbox_tercihlistem_4);
+        checkBox5  = findViewById(R.id.checkbox_tercihlistem_5);
+        checkBox6  = findViewById(R.id.checkbox_tercihlistem_6);
+        checkBox7  = findViewById(R.id.checkbox_tercihlistem_7);
+        checkBox8  = findViewById(R.id.checkbox_tercihlistem_8);
+        checkBox9  = findViewById(R.id.checkbox_tercihlistem_9);
+        checkBox10 = findViewById(R.id.checkbox_tercihlistem_10);
+        checkBox11 = findViewById(R.id.checkbox_tercihlistem_11);
+        checkBox12 = findViewById(R.id.checkbox_tercihlistem_12);
+        checkBox13 = findViewById(R.id.checkbox_tercihlistem_13);
+        checkBox14 = findViewById(R.id.checkbox_tercihlistem_14);
+        checkBox15 = findViewById(R.id.checkbox_tercihlistem_15);
+        checkBox16 = findViewById(R.id.checkbox_tercihlistem_16);
+        checkBox17 = findViewById(R.id.checkbox_tercihlistem_17);
+        checkBox18 = findViewById(R.id.checkbox_tercihlistem_18);
+        checkBox19 = findViewById(R.id.checkbox_tercihlistem_19);
+        checkBox20 = findViewById(R.id.checkbox_tercihlistem_20);
+        checkBox21 = findViewById(R.id.checkbox_tercihlistem_21);
+        checkBox22 = findViewById(R.id.checkbox_tercihlistem_22);
+        checkBox23 = findViewById(R.id.checkbox_tercihlistem_23);
+        checkBox24 = findViewById(R.id.checkbox_tercihlistem_24);
+
         anamenu_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -96,10 +96,6 @@ public class Tercih_Listem extends AppCompatActivity {
                 String tercihList = dataSnapshot.child("Tercih_list").getValue(String.class);
                 // tercihList değişkenine eriştim
 
-                //String str = Objects.requireNonNull(someObject);
-                //String[] parts = str.split("\\.");
-
-
                 String[] tercihListArray = new String[0];
                 if (tercihList != null) {
                     tercihListArray = tercihList.split(",");
@@ -110,58 +106,39 @@ public class Tercih_Listem extends AppCompatActivity {
                 System.out.println(tercihListArray.length);
 
                 for (int i = 0; i< tercihListArray.length; i++){
+
                     if (!Objects.equals(tercihListArray[i], "")){
 
-                        CheckBox checkBox = (CheckBox) findViewById(R.id.checkbox_tercihlistem_0);
-                        checkBox.setText(tercihListArray[tercihListArray.length-1]);
-                        CheckBox checkBox1 = (CheckBox) findViewById(R.id.checkbox_tercihlistem_1);
-                        checkBox1.setText(tercihListArray[tercihListArray.length-2]);
-                        CheckBox checkBox2 = (CheckBox) findViewById(R.id.checkbox_tercihlistem_2);
-                        checkBox2.setText(tercihListArray[tercihListArray.length-3]);
-                        CheckBox checkBox3 = (CheckBox) findViewById(R.id.checkbox_tercihlistem_3);
-                        checkBox3.setText(tercihListArray[tercihListArray.length-4]);
-                        CheckBox checkBox4 = (CheckBox) findViewById(R.id.checkbox_tercihlistem_4);
-                        checkBox4.setText(tercihListArray[tercihListArray.length-5]);
-                        CheckBox checkBox5 = (CheckBox) findViewById(R.id.checkbox_tercihlistem_5);
-                        checkBox5.setText(tercihListArray[tercihListArray.length-6]);
-                        CheckBox checkBox6 = (CheckBox) findViewById(R.id.checkbox_tercihlistem_6);
-                        checkBox6.setText(tercihListArray[tercihListArray.length-7]);
-                        CheckBox checkBox7 = (CheckBox) findViewById(R.id.checkbox_tercihlistem_7);
-                        checkBox7.setText(tercihListArray[tercihListArray.length-8]);
-                        CheckBox checkBox8 = (CheckBox) findViewById(R.id.checkbox_tercihlistem_8);
-                        checkBox8.setText(tercihListArray[tercihListArray.length-9]);
-                        CheckBox checkBox9 = (CheckBox) findViewById(R.id.checkbox_tercihlistem_9);
-                        checkBox9.setText(tercihListArray[tercihListArray.length-10]);
-                        CheckBox checkBox10 = (CheckBox) findViewById(R.id.checkbox_tercihlistem_10);
-                        checkBox10.setText(tercihListArray[tercihListArray.length-11]);
-                        CheckBox checkBox11 = (CheckBox) findViewById(R.id.checkbox_tercihlistem_11);
-                        checkBox11.setText(tercihListArray[tercihListArray.length-12]);
-                        CheckBox checkBox12 = (CheckBox) findViewById(R.id.checkbox_tercihlistem_12);
-                        checkBox12.setText(tercihListArray[tercihListArray.length-13]);
-                        CheckBox checkBox13 = (CheckBox) findViewById(R.id.checkbox_tercihlistem_13);
-                        checkBox13.setText(tercihListArray[tercihListArray.length-14]);
-                        CheckBox checkBox14 = (CheckBox) findViewById(R.id.checkbox_tercihlistem_14);
-                        checkBox14.setText(tercihListArray[tercihListArray.length-15]);
-                        CheckBox checkBox15 = (CheckBox) findViewById(R.id.checkbox_tercihlistem_15);
-                        checkBox15.setText(tercihListArray[tercihListArray.length-16]);
-                        CheckBox checkBox16 = (CheckBox) findViewById(R.id.checkbox_tercihlistem_16);
-                        checkBox16.setText(tercihListArray[tercihListArray.length-17]);
-                        CheckBox checkBox17 = (CheckBox) findViewById(R.id.checkbox_tercihlistem_17);
-                        checkBox17.setText(tercihListArray[tercihListArray.length-18]);
-                        CheckBox checkBox18 = (CheckBox) findViewById(R.id.checkbox_tercihlistem_18);
-                        checkBox18.setText(tercihListArray[tercihListArray.length-19]);
-                        CheckBox checkBox19 = (CheckBox) findViewById(R.id.checkbox_tercihlistem_19);
-                        checkBox19.setText(tercihListArray[tercihListArray.length-20]);
-                        CheckBox checkBox20 = (CheckBox) findViewById(R.id.checkbox_tercihlistem_20);
-                        checkBox20.setText(tercihListArray[tercihListArray.length-21]);
-                        CheckBox checkBox21 = (CheckBox) findViewById(R.id.checkbox_tercihlistem_21);
-                        checkBox21.setText(tercihListArray[tercihListArray.length-22]);
-                        CheckBox checkBox22 = (CheckBox) findViewById(R.id.checkbox_tercihlistem_22);
-                        checkBox22.setText(tercihListArray[tercihListArray.length-23]);
-                        CheckBox checkBox23 = (CheckBox) findViewById(R.id.checkbox_tercihlistem_23);
-                        checkBox23.setText(tercihListArray[tercihListArray.length-24]);
-                        CheckBox checkBox24 = (CheckBox) findViewById(R.id.checkbox_tercihlistem_24);
-                        checkBox24.setText(tercihListArray[tercihListArray.length-25]);
+                        try {
+                            checkBox0.setText(tercihListArray[tercihListArray.length-1]);
+                            checkBox1.setText(tercihListArray[tercihListArray.length-2]);
+                            checkBox2.setText(tercihListArray[tercihListArray.length-3]);
+                            checkBox3.setText(tercihListArray[tercihListArray.length-4]);
+                            checkBox4.setText(tercihListArray[tercihListArray.length-5]);
+                            checkBox5.setText(tercihListArray[tercihListArray.length-6]);
+                            checkBox6.setText(tercihListArray[tercihListArray.length-7]);
+                            checkBox7.setText(tercihListArray[tercihListArray.length-8]);
+                            checkBox8.setText(tercihListArray[tercihListArray.length-9]);
+                            checkBox9.setText(tercihListArray[tercihListArray.length-10]);
+                            checkBox10.setText(tercihListArray[tercihListArray.length-11]);
+                            checkBox11.setText(tercihListArray[tercihListArray.length-12]);
+                            checkBox12.setText(tercihListArray[tercihListArray.length-13]);
+                            checkBox13.setText(tercihListArray[tercihListArray.length-14]);
+                            checkBox14.setText(tercihListArray[tercihListArray.length-15]);
+                            checkBox15.setText(tercihListArray[tercihListArray.length-16]);
+                            checkBox16.setText(tercihListArray[tercihListArray.length-17]);
+                            checkBox17.setText(tercihListArray[tercihListArray.length-18]);
+                            checkBox18.setText(tercihListArray[tercihListArray.length-19]);
+                            checkBox19.setText(tercihListArray[tercihListArray.length-20]);
+                            checkBox20.setText(tercihListArray[tercihListArray.length-21]);
+                            checkBox21.setText(tercihListArray[tercihListArray.length-22]);
+                            checkBox22.setText(tercihListArray[tercihListArray.length-23]);
+                            checkBox23.setText(tercihListArray[tercihListArray.length-24]);
+                            checkBox24.setText(tercihListArray[tercihListArray.length-25]);
+                        }
+                        catch (ArrayIndexOutOfBoundsException e) {
+                            e.printStackTrace();
+                        }
                     }
 
                 }
@@ -173,7 +150,6 @@ public class Tercih_Listem extends AppCompatActivity {
             }
 
         });
-
 
     }
     public void openMain_activity(){

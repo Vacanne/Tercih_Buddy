@@ -41,9 +41,9 @@ public class MainActivity extends AppCompatActivity {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
         sehirveuniversitesecimi_button = findViewById(R.id.sehir_ve_universite_secimi_button);
-        tercihlistem_button = findViewById(R.id.tercih_listem);
-        aramakriterleri_button = findViewById(R.id.arama_kriterleri_button);
-        alanlarbolumler_button = findViewById(R.id.alanlar_bölümler_button);
+        tercihlistem_button            = findViewById(R.id.tercih_listem);
+        aramakriterleri_button         = findViewById(R.id.arama_kriterleri_button);
+        alanlarbolumler_button         = findViewById(R.id.alanlar_bölümler_button);
 
         sehirveuniversitesecimi_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 try {
-                    URL url = new URL("https://mu.edu.tr/");
+                    URL url = new URL("https://mk.edu.tr/");
                     HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                     connection.setRequestMethod("GET");
                     connection.setRequestProperty("User-Agent", "Mozilla/5.0");
@@ -119,21 +119,3 @@ public class MainActivity extends AppCompatActivity {
     }
 
 }
-
-
-
-/*
-protected void onStart() {
-        super.onStart();
-
-        if (activeUser == null) {
-            Intent loginIntent = new Intent(MainActivity.this, LoginActivity.class);
-            loginIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-            finish();
-            startActivity(loginIntent);
-        } else {
-            haveUsers();
-            userisActive("ON");
-        }
-    }
- */

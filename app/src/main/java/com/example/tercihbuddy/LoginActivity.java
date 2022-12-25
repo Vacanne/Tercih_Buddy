@@ -54,8 +54,8 @@ public class LoginActivity extends AppCompatActivity  {
     }
 
     private void allowUser() {
-        String email = "must1@gmail.com"; //edtUserMail.getText().toString();
-        String password ="654321"; //edtUserPassword.getText().toString();
+        String email = edtUserMail.getText().toString();
+        String password = edtUserPassword.getText().toString();
 
         if (TextUtils.isEmpty(email)) {
             Toast.makeText(this, "Email cannot be empty...!!!", Toast.LENGTH_LONG).show();

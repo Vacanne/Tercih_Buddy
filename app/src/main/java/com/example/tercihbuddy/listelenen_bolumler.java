@@ -38,57 +38,39 @@ public class listelenen_bolumler extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.listelenen_bolumler);
 
-        myAuth = FirebaseAuth.getInstance();
+        myAuth     = FirebaseAuth.getInstance();
         activeUser = myAuth.getCurrentUser();
 
-        tercihlistemeekle_button = (Button) findViewById(R.id.listbol_tercih_listeme_ekle_button);
-        listbol_ana_menu_button = (Button) findViewById(R.id.listbol_ana_menu_button);
-        tercih_listem = (Button) findViewById(R.id.listbol_tercih_listem_button);
+        tercihlistemeekle_button = findViewById(R.id.listbol_tercih_listeme_ekle_button);
+        listbol_ana_menu_button  = findViewById(R.id.listbol_ana_menu_button);
+        tercih_listem            = findViewById(R.id.listbol_tercih_listem_button);
 
+        listbol_checkBox0  = findViewById(R.id.checkbox_listelenenblomler_0);
+        listbol_checkBox1  = findViewById(R.id.checkbox_listelenenblomler_1);
+        listbol_checkBox2  = findViewById(R.id.checkbox_listelenenblomler_2);
+        listbol_checkBox3  = findViewById(R.id.checkbox_listelenenblomler_3);
+        listbol_checkBox4  = findViewById(R.id.checkbox_listelenenblomler_4);
+        listbol_checkBox5  = findViewById(R.id.checkbox_listelenenblomler_5);
+        listbol_checkBox6  = findViewById(R.id.checkbox_listelenenblomler_6);
+        listbol_checkBox7  = findViewById(R.id.checkbox_listelenenblomler_7);
+        listbol_checkBox8  = findViewById(R.id.checkbox_listelenenblomler_8);
+        listbol_checkBox9  = findViewById(R.id.checkbox_listelenenblomler_9);
+        listbol_checkBox10 = findViewById(R.id.checkbox_listelenenblomler_10);
+        listbol_checkBox11 = findViewById(R.id.checkbox_listelenenblomler_11);
+        listbol_checkBox12 = findViewById(R.id.checkbox_listelenenblomler_12);
+        listbol_checkBox13 = findViewById(R.id.checkbox_listelenenblomler_13);
+        listbol_checkBox14 = findViewById(R.id.checkbox_listelenenblomler_14);
+        listbol_checkBox15 = findViewById(R.id.checkbox_listelenenblomler_15);
+        listbol_checkBox16 = findViewById(R.id.checkbox_listelenenblomler_16);
+        listbol_checkBox17 = findViewById(R.id.checkbox_listelenenblomler_17);
+        listbol_checkBox18 = findViewById(R.id.checkbox_listelenenblomler_18);
+        listbol_checkBox19 = findViewById(R.id.checkbox_listelenenblomler_19);
+        listbol_checkBox20 = findViewById(R.id.checkbox_listelenenblomler_20);
+        listbol_checkBox21 = findViewById(R.id.checkbox_listelenenblomler_21);
+        listbol_checkBox22 = findViewById(R.id.checkbox_listelenenblomler_22);
+        listbol_checkBox23 = findViewById(R.id.checkbox_listelenenblomler_23);
+        listbol_checkBox24 = findViewById(R.id.checkbox_listelenenblomler_24);
 
-        listbol_checkBox0 = (CheckBox) findViewById(R.id.checkbox_listelenenblomler_0);
-        listbol_checkBox1 = (CheckBox) findViewById(R.id.checkbox_listelenenblomler_1);
-        listbol_checkBox2 = (CheckBox) findViewById(R.id.checkbox_listelenenblomler_2);
-        listbol_checkBox3 = (CheckBox) findViewById(R.id.checkbox_listelenenblomler_3);
-        listbol_checkBox4 = (CheckBox) findViewById(R.id.checkbox_listelenenblomler_4);
-        listbol_checkBox5 = (CheckBox) findViewById(R.id.checkbox_listelenenblomler_5);
-        listbol_checkBox6 = (CheckBox) findViewById(R.id.checkbox_listelenenblomler_6);
-        listbol_checkBox7 = (CheckBox) findViewById(R.id.checkbox_listelenenblomler_7);
-        listbol_checkBox8 = (CheckBox) findViewById(R.id.checkbox_listelenenblomler_8);
-        listbol_checkBox9 = (CheckBox) findViewById(R.id.checkbox_listelenenblomler_9);
-        listbol_checkBox10 = (CheckBox) findViewById(R.id.checkbox_listelenenblomler_10);
-        listbol_checkBox11 = (CheckBox) findViewById(R.id.checkbox_listelenenblomler_11);
-        listbol_checkBox12 = (CheckBox) findViewById(R.id.checkbox_listelenenblomler_12);
-        listbol_checkBox13 = (CheckBox) findViewById(R.id.checkbox_listelenenblomler_13);
-        listbol_checkBox14 = (CheckBox) findViewById(R.id.checkbox_listelenenblomler_14);
-        listbol_checkBox15 = (CheckBox) findViewById(R.id.checkbox_listelenenblomler_15);
-        listbol_checkBox16 = (CheckBox) findViewById(R.id.checkbox_listelenenblomler_16);
-        listbol_checkBox17 = (CheckBox) findViewById(R.id.checkbox_listelenenblomler_17);
-        listbol_checkBox18 = (CheckBox) findViewById(R.id.checkbox_listelenenblomler_18);
-        listbol_checkBox19 = (CheckBox) findViewById(R.id.checkbox_listelenenblomler_19);
-        listbol_checkBox20 = (CheckBox) findViewById(R.id.checkbox_listelenenblomler_20);
-        listbol_checkBox21 = (CheckBox) findViewById(R.id.checkbox_listelenenblomler_21);
-        listbol_checkBox22 = (CheckBox) findViewById(R.id.checkbox_listelenenblomler_22);
-        listbol_checkBox23 = (CheckBox) findViewById(R.id.checkbox_listelenenblomler_23);
-        listbol_checkBox24 = (CheckBox) findViewById(R.id.checkbox_listelenenblomler_24);
-
-/*
-        CheckBox checkBox = findViewById(R.id.checkbox_id);
-        boolean isChecked = checkBox.isChecked();
-
-
-        checkBox.setChecked(true);  // to check the CheckBox
-        checkBox.setChecked(false);  // to uncheck the CheckBox
-
-
-        checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                // Perform action here
-            }
-        });
-
-         */
 
         listbol_ana_menu_button.setOnClickListener(new View.OnClickListener() {
             @Override
