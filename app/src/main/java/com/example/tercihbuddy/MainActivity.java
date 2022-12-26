@@ -105,6 +105,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 try {
+
                     URL imageUrl = new URL("https://upload.wikimedia.org/wikipedia/tr/3/3c/Android-Marshmallow-logo-.jpg");
                     HttpURLConnection connection = (HttpURLConnection) imageUrl.openConnection();
                     connection.setRequestMethod("GET");
@@ -115,9 +116,8 @@ public class MainActivity extends AppCompatActivity {
                         int contentLength = connection.getContentLength();
                         // read the image data
                         InputStream inputStream = connection.getInputStream();
-                        //write the image data
-                        OutputStream outputStream = new FileOutputStream("image.jpg");
-                        // Read the image data and write it to the output stream
+                        // write the image data to a byte array
+                        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
                         byte[] buffer = new byte[1024];
                         int bytesRead;
                         int totalBytesRead = 0;
@@ -128,6 +128,8 @@ public class MainActivity extends AppCompatActivity {
                         // Close the input and output streams
                         inputStream.close();
                         outputStream.close();
+                        // Get the byte array
+                        byte[] imageData = outputStream.toByteArray();
                         // Check if the image is the same size as the original
                         if (totalBytesRead == contentLength) {
                             System.out.println("Image downloaded successfully.");
