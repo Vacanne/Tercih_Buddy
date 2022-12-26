@@ -15,6 +15,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -72,12 +73,12 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        // Create a new thread
+       /* // Create a new thread
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
                 try {
-                    URL url = new URL("https://mk.edu.tr/");
+                    URL url = new URL("https://mu.edu.tr/");
                     HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                     connection.setRequestMethod("GET");
                     connection.setRequestProperty("User-Agent", "Mozilla/5.0");
@@ -97,8 +98,52 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Start the thread
-        thread.start();
+        thread.start();*/
 
+
+        Thread imageThread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    URL imageUrl = new URL("https://upload.wikimedia.org/wikipedia/tr/3/3c/Android-Marshmallow-logo-.jpg");
+                    HttpURLConnection connection = (HttpURLConnection) imageUrl.openConnection();
+                    connection.setRequestMethod("GET");
+                    connection.setRequestProperty("User-Agent", "Mozilla/5.0");
+                    int responseCode = connection.getResponseCode();
+                    if (responseCode == 200) {
+                        // Get the size of the image
+                        int contentLength = connection.getContentLength();
+                        // read the image data
+                        InputStream inputStream = connection.getInputStream();
+                        //write the image data
+                        OutputStream outputStream = new FileOutputStream("image.jpg");
+                        // Read the image data and write it to the output stream
+                        byte[] buffer = new byte[1024];
+                        int bytesRead;
+                        int totalBytesRead = 0;
+                        while ((bytesRead = inputStream.read(buffer)) != -1) {
+                            outputStream.write(buffer, 0, bytesRead);
+                            totalBytesRead += bytesRead;
+                        }
+                        // Close the input and output streams
+                        inputStream.close();
+                        outputStream.close();
+                        // Check if the image is the same size as the original
+                        if (totalBytesRead == contentLength) {
+                            System.out.println("Image downloaded successfully.");
+                        } else {
+                            System.out.println("Error downloading image: size does not match.");
+                        }
+                    } else {
+                        System.out.println("Error downloading image: HTTP response code " + responseCode);
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+        imageThread.start();
     }
 
     public void opensehirveuniversitesecimi() {
